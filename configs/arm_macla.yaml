@@ -1,0 +1,67 @@
+# MACLA arm, unified protocol. Inherits the frozen _base.yaml; only the memory: block
+# differs. Follows the MACLA paper (arXiv 2512.18950), not its released code (DEC-12);
+# memory/macla_memory.py maps each part to its paper section.
+#
+#   slurm/submit.sh macla
+#
+# Removed in Stage 5 (docs/rerun_change_log.md, P7/P8/P16): theta_conf is no longer a
+# config value. It was 0.05, chosen after looking at eval results (P8). It is now
+# computed by §D.1.2 Eq. 13 from this arm's own training episodes. use_llm_goals,
+# llm_abstraction, slot_abstraction and learn_from_failures are gone with the code
+# paths they switched.
+extends: _base.yaml
+
+train:
+  memory:
+    type: macla
+    # Store sizes, §5.1.
+    N_p: 200
+    N_m: 50
+
+    # §4.1 duplicate threshold on [G; Ψ; Φ] similarity, the paper's value (Table 8).
+    theta_dup: 0.85
+
+    # Failure-risk context match (Eq. 4 Risk). Jaccard over words at 0.90: the engine's
+    # one-sided overlap at 0.75 matched every ALFWorld room and pinned Risk at 1.0.
+    theta_risk: 0.90
+
+    # §4.1 (DEC-11): one memory-LLM call per training episode splits the trajectory into
+    # sub-tasks with goal, preconditions and postconditions; from a failed episode only
+    # sub-tasks whose key action the game acknowledged are kept (§B.1). On an
+    # unusable reply the arm cuts at navigation boundaries instead (logged).
+    segment_with_llm: true
+
+    # §4.3: one memory-LLM call compares a procedure's successful and failed uses once
+    # it has at least 3 of each; the output edits its preconditions, steps and
+    # postconditions.
+    refine_with_llm: true
+
+    # §4.5 ontology, rebuilt from this arm's own training text every N episodes.
+    ontology_every: 100
+
+    # Ours (disclosed): where the task object was picked up before, filtered to the
+    # receptacles in the current room.
+    show_locations: true
+    top_k_locations: 5
+
+    # §4.4 abort: a running meta-procedure is abandoned after this many consecutive
+    # "Nothing happens." replies; the arm then falls back to single procedures.
+    abort_after: 3
+
+    # §4.6 Eq. 8 recency term exp(-age / decay), age counted in episodes.
+    decay_episodes: 100
+
+eval:
+  memory:
+    type: macla
+    N_p: 200
+    N_m: 50
+    theta_dup: 0.85
+    theta_risk: 0.90
+    segment_with_llm: true     # freeze() blocks learning; no calls are made at eval
+    refine_with_llm: true
+    ontology_every: 100
+    show_locations: true
+    top_k_locations: 5
+    abort_after: 3
+    decay_episodes: 100

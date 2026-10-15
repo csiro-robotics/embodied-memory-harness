@@ -1,0 +1,773 @@
+{
+  "train": {
+    "memory_type": "wiki_v3",
+    "memory_injection": {
+      "episodes_measured": 500,
+      "steps_total": 14816,
+      "retrieval_rate": 0.968,
+      "retrieval_steps_per_episode": 28.69,
+      "offered_tokens_per_episode": 1382.5,
+      "injected_tokens_per_episode": 1382.5,
+      "offered_tokens_per_step": 46.7,
+      "injected_tokens_per_step": 46.7,
+      "discarded_fraction": 0.0,
+      "truncated_step_rate": 0.0,
+      "peak_offered_tokens": 90
+    },
+    "memory_update_totals": {
+      "episode_index": 125250,
+      "observations_recorded": 17438,
+      "actions_attested": 1489,
+      "consolidated": 20,
+      "n_sources": 500,
+      "n_llm_calls": 140,
+      "n_findings": 120,
+      "n_rejected_outcome": 0,
+      "n_rejected_claims": 0,
+      "pass": 210,
+      "store": {
+        "n_pages": 260,
+        "total_words": 29247
+      }
+    },
+    "memory_timing_per_episode_s": {
+      "retrieve_s": 1.732,
+      "action_s": 10.338,
+      "update_s": 1.824
+    },
+    "action_model": "qwen3:14b",
+    "memory_model": "qwen3:14b",
+    "n": 500,
+    "n_success": 255,
+    "sr": 0.51,
+    "elapsed_s": 8452.8,
+    "avg_ep_s": 16.9,
+    "steps": {
+      "avg": 29.6,
+      "avg_ok": 10.1,
+      "avg_fail": 50.0
+    },
+    "token_usage": {
+      "action": {
+        "prompt_tokens": 18288039,
+        "completion_tokens": 102683,
+        "total_tokens": 18390722,
+        "n_calls": 15048
+      },
+      "memory": {
+        "prompt_tokens": 1237408,
+        "completion_tokens": 78412,
+        "total_tokens": 1315820,
+        "n_calls": 1105
+      },
+      "total": {
+        "prompt_tokens": 19525447,
+        "completion_tokens": 181095,
+        "total_tokens": 19706542,
+        "n_calls": 16153
+      },
+      "action_pick_paths": {
+        "digit": 14582,
+        "range_retry_digit": 71,
+        "range_retry_clamped": 161,
+        "edit_distance": 1,
+        "digit_leading": 1
+      },
+      "transport_retries": {
+        "action": 0,
+        "memory": 0
+      },
+      "length_stops": {
+        "action": 0,
+        "memory": 0
+      },
+      "calls_per_episode": {
+        "action": 30.1,
+        "memory": 2.21
+      }
+    },
+    "per_family": {
+      "examine_in_light": {
+        "n": 43,
+        "success": 10,
+        "rate": 0.23255813953488372,
+        "avg_steps_ok": 10.6,
+        "avg_steps_fail": 50.0
+      },
+      "pick_and_place": {
+        "n": 111,
+        "success": 91,
+        "rate": 0.8198198198198198,
+        "avg_steps_ok": 5.747252747252747,
+        "avg_steps_fail": 50.0
+      },
+      "pick_clean_then_place": {
+        "n": 91,
+        "success": 59,
+        "rate": 0.6483516483516484,
+        "avg_steps_ok": 10.542372881355933,
+        "avg_steps_fail": 50.0
+      },
+      "pick_cool_then_place": {
+        "n": 75,
+        "success": 12,
+        "rate": 0.16,
+        "avg_steps_ok": 11.416666666666666,
+        "avg_steps_fail": 50.0
+      },
+      "pick_heat_then_place": {
+        "n": 65,
+        "success": 24,
+        "rate": 0.36923076923076925,
+        "avg_steps_ok": 14.5,
+        "avg_steps_fail": 50.0
+      },
+      "pick_two_obj_and_place": {
+        "n": 115,
+        "success": 59,
+        "rate": 0.5130434782608696,
+        "avg_steps_ok": 14.067796610169491,
+        "avg_steps_fail": 50.0
+      }
+    },
+    "sr_windows": [
+      {
+        "start": 1,
+        "end": 10,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 11,
+        "end": 20,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 21,
+        "end": 30,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 31,
+        "end": 40,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 41,
+        "end": 50,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 51,
+        "end": 60,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 61,
+        "end": 70,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 71,
+        "end": 80,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 81,
+        "end": 90,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 91,
+        "end": 100,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 101,
+        "end": 110,
+        "n": 10,
+        "success": 7,
+        "rate": 0.7
+      },
+      {
+        "start": 111,
+        "end": 120,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 121,
+        "end": 130,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 131,
+        "end": 140,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 141,
+        "end": 150,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 151,
+        "end": 160,
+        "n": 10,
+        "success": 8,
+        "rate": 0.8
+      },
+      {
+        "start": 161,
+        "end": 170,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 171,
+        "end": 180,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 181,
+        "end": 190,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 191,
+        "end": 200,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 201,
+        "end": 210,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 211,
+        "end": 220,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 221,
+        "end": 230,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 231,
+        "end": 240,
+        "n": 10,
+        "success": 7,
+        "rate": 0.7
+      },
+      {
+        "start": 241,
+        "end": 250,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 251,
+        "end": 260,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 261,
+        "end": 270,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 271,
+        "end": 280,
+        "n": 10,
+        "success": 8,
+        "rate": 0.8
+      },
+      {
+        "start": 281,
+        "end": 290,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 291,
+        "end": 300,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 301,
+        "end": 310,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 311,
+        "end": 320,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 321,
+        "end": 330,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 331,
+        "end": 340,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 341,
+        "end": 350,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 351,
+        "end": 360,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 361,
+        "end": 370,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 371,
+        "end": 380,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 381,
+        "end": 390,
+        "n": 10,
+        "success": 10,
+        "rate": 1.0
+      },
+      {
+        "start": 391,
+        "end": 400,
+        "n": 10,
+        "success": 7,
+        "rate": 0.7
+      },
+      {
+        "start": 401,
+        "end": 410,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 411,
+        "end": 420,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 421,
+        "end": 430,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 431,
+        "end": 440,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 441,
+        "end": 450,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 451,
+        "end": 460,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 461,
+        "end": 470,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 471,
+        "end": 480,
+        "n": 10,
+        "success": 7,
+        "rate": 0.7
+      },
+      {
+        "start": 481,
+        "end": 490,
+        "n": 10,
+        "success": 7,
+        "rate": 0.7
+      },
+      {
+        "start": 491,
+        "end": 500,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      }
+    ],
+    "memory_stats": {
+      "episodes": 500,
+      "episodes_this_phase": 500,
+      "consolidations": 20,
+      "read_llm_calls": 965,
+      "read_errors": 0,
+      "consolidation_llm_calls": 140,
+      "memory_llm_calls_per_episode": 2.21,
+      "priors_objects": 59,
+      "priors_observations": 17438,
+      "evidence_forms": 690,
+      "n_pages": 13,
+      "by_type": {
+        "entity": 1,
+        "procedure": 11,
+        "caution": 1
+      },
+      "total_words": 1645
+    },
+    "deviations": [
+      {
+        "key": "train.memory_llm.max_tokens",
+        "reason": "Consolidation emits whole Markdown pages; action selection emits a single integer. Applies only to the memory path."
+      },
+      {
+        "key": "eval.memory_llm.max_tokens",
+        "reason": "Same as train.memory_llm.max_tokens (read path only; writes are frozen at eval)."
+      }
+    ],
+    "replicate": 2,
+    "seed": 43,
+    "errored_episodes": 0
+  },
+  "eval": {
+    "memory_type": "wiki_v3",
+    "memory_injection": {
+      "episodes_measured": 134,
+      "steps_total": 5020,
+      "retrieval_rate": 1.0,
+      "retrieval_steps_per_episode": 37.46,
+      "offered_tokens_per_episode": 1952.2,
+      "injected_tokens_per_episode": 1952.2,
+      "offered_tokens_per_step": 52.1,
+      "injected_tokens_per_step": 52.1,
+      "discarded_fraction": 0.0,
+      "truncated_step_rate": 0.0,
+      "peak_offered_tokens": 146
+    },
+    "memory_update_totals": null,
+    "memory_timing_per_episode_s": {
+      "retrieve_s": 1.909,
+      "action_s": 12.132,
+      "update_s": 0.0
+    },
+    "action_model": "qwen3:14b",
+    "memory_model": "qwen3:14b",
+    "n": 134,
+    "n_success": 45,
+    "sr": 0.3358208955223881,
+    "elapsed_s": 2260.1,
+    "avg_ep_s": 16.9,
+    "steps": {
+      "avg": 37.5,
+      "avg_ok": 12.7,
+      "avg_fail": 50.0
+    },
+    "token_usage": {
+      "action": {
+        "prompt_tokens": 5810985,
+        "completion_tokens": 34810,
+        "total_tokens": 5845795,
+        "n_calls": 5096
+      },
+      "memory": {
+        "prompt_tokens": 205839,
+        "completion_tokens": 10273,
+        "total_tokens": 216112,
+        "n_calls": 268
+      },
+      "total": {
+        "prompt_tokens": 6016824,
+        "completion_tokens": 45083,
+        "total_tokens": 6061907,
+        "n_calls": 5364
+      },
+      "action_pick_paths": {
+        "digit": 4932,
+        "range_retry_clamped": 45,
+        "range_retry_digit": 31,
+        "digit_leading": 12
+      },
+      "transport_retries": {
+        "action": 0,
+        "memory": 0
+      },
+      "length_stops": {
+        "action": 0,
+        "memory": 0
+      },
+      "calls_per_episode": {
+        "action": 38.03,
+        "memory": 2.0
+      }
+    },
+    "per_family": {
+      "examine_in_light": {
+        "n": 18,
+        "success": 3,
+        "rate": 0.16666666666666666,
+        "avg_steps_ok": 5.0,
+        "avg_steps_fail": 50.0
+      },
+      "pick_and_place": {
+        "n": 24,
+        "success": 8,
+        "rate": 0.3333333333333333,
+        "avg_steps_ok": 8.375,
+        "avg_steps_fail": 50.0
+      },
+      "pick_clean_then_place": {
+        "n": 31,
+        "success": 12,
+        "rate": 0.3870967741935484,
+        "avg_steps_ok": 16.083333333333332,
+        "avg_steps_fail": 50.0
+      },
+      "pick_cool_then_place": {
+        "n": 21,
+        "success": 10,
+        "rate": 0.47619047619047616,
+        "avg_steps_ok": 13.4,
+        "avg_steps_fail": 50.0
+      },
+      "pick_heat_then_place": {
+        "n": 23,
+        "success": 4,
+        "rate": 0.17391304347826086,
+        "avg_steps_ok": 11.75,
+        "avg_steps_fail": 50.0
+      },
+      "pick_two_obj_and_place": {
+        "n": 17,
+        "success": 8,
+        "rate": 0.47058823529411764,
+        "avg_steps_ok": 14.25,
+        "avg_steps_fail": 50.0
+      }
+    },
+    "sr_windows": [
+      {
+        "start": 1,
+        "end": 10,
+        "n": 10,
+        "success": 2,
+        "rate": 0.2
+      },
+      {
+        "start": 11,
+        "end": 20,
+        "n": 10,
+        "success": 1,
+        "rate": 0.1
+      },
+      {
+        "start": 21,
+        "end": 30,
+        "n": 10,
+        "success": 1,
+        "rate": 0.1
+      },
+      {
+        "start": 31,
+        "end": 40,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 41,
+        "end": 50,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 51,
+        "end": 60,
+        "n": 10,
+        "success": 2,
+        "rate": 0.2
+      },
+      {
+        "start": 61,
+        "end": 70,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 71,
+        "end": 80,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 81,
+        "end": 90,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 91,
+        "end": 100,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 101,
+        "end": 110,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 111,
+        "end": 120,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 121,
+        "end": 130,
+        "n": 10,
+        "success": 2,
+        "rate": 0.2
+      },
+      {
+        "start": 131,
+        "end": 134,
+        "n": 4,
+        "success": 2,
+        "rate": 0.5
+      }
+    ],
+    "memory_stats": {
+      "episodes": 500,
+      "episodes_this_phase": 134,
+      "consolidations": 0,
+      "read_llm_calls": 268,
+      "read_errors": 0,
+      "consolidation_llm_calls": 0,
+      "memory_llm_calls_per_episode": 2.0,
+      "priors_objects": 59,
+      "priors_observations": 17438,
+      "evidence_forms": 690,
+      "n_pages": 13,
+      "by_type": {
+        "entity": 1,
+        "procedure": 11,
+        "caution": 1
+      },
+      "total_words": 1645
+    },
+    "deviations": [
+      {
+        "key": "train.memory_llm.max_tokens",
+        "reason": "Consolidation emits whole Markdown pages; action selection emits a single integer. Applies only to the memory path."
+      },
+      {
+        "key": "eval.memory_llm.max_tokens",
+        "reason": "Same as train.memory_llm.max_tokens (read path only; writes are frozen at eval)."
+      }
+    ],
+    "errored_episodes": 0,
+    "trained_store_sha256": {
+      "before_eval": "ca46a959ace73ad0aff7850ffb1f73a5e6e8d00b43ad140e712074cc2cfb9ffd",
+      "after_eval": "ca46a959ace73ad0aff7850ffb1f73a5e6e8d00b43ad140e712074cc2cfb9ffd",
+      "unchanged": true
+    },
+    "eval_split": "eval_out_of_distribution",
+    "replicate": 2,
+    "seed": 43,
+    "is_dev": false
+  }
+}

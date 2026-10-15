@@ -1,0 +1,229 @@
+---
+name: pick-and-place
+description: A procedure for moving an object from one receptacle to another, used
+  when the object is already in a valid location and the destination is known.
+type: procedure
+applies_to:
+- pick_and_place
+objects:
+- cellphone
+- egg
+- mug
+- newspaper
+- pencil
+- tomato
+- cup
+- handtowel
+- candle
+- wateringcan
+- book
+- saltshaker
+- knife
+- plate
+- pot
+- apple
+- bread
+- potato
+- spatula
+- tomato
+- winebottle
+- bowl
+- spatula
+sources:
+- ep101
+- ep102
+- ep103
+- ep104
+- ep105
+- ep106
+- ep107
+- ep108
+- ep109
+- ep110
+- ep111
+- ep112
+- ep113
+- ep114
+- ep115
+- ep116
+- ep117
+- ep118
+- ep119
+- ep120
+- ep121
+- ep122
+- ep123
+- ep124
+- ep125
+- ep126
+- ep127
+- ep128
+- ep129
+- ep130
+- ep131
+- ep132
+- ep133
+- ep134
+- ep135
+- ep136
+- ep137
+- ep138
+- ep139
+- ep140
+- ep141
+- ep142
+- ep143
+- ep144
+- ep145
+- ep146
+- ep147
+- ep148
+- ep149
+- ep150
+- ep176
+- ep177
+- ep178
+- ep179
+- ep180
+- ep181
+- ep182
+- ep183
+- ep184
+- ep185
+- ep186
+- ep187
+- ep188
+- ep189
+- ep190
+- ep191
+- ep192
+- ep193
+- ep194
+- ep195
+- ep196
+- ep197
+- ep198
+- ep199
+- ep200
+- ep251
+- ep252
+- ep253
+- ep254
+- ep255
+- ep256
+- ep257
+- ep258
+- ep259
+- ep260
+- ep261
+- ep262
+- ep263
+- ep264
+- ep265
+- ep266
+- ep267
+- ep268
+- ep269
+- ep270
+- ep271
+- ep272
+- ep273
+- ep274
+- ep275
+- ep276
+- ep277
+- ep278
+- ep279
+- ep280
+- ep281
+- ep282
+- ep283
+- ep284
+- ep285
+- ep286
+- ep287
+- ep288
+- ep289
+- ep290
+- ep291
+- ep292
+- ep293
+- ep294
+- ep295
+- ep296
+- ep297
+- ep298
+- ep299
+- ep300
+- ep301
+- ep302
+- ep303
+- ep304
+- ep305
+- ep306
+- ep307
+- ep308
+- ep309
+- ep310
+- ep311
+- ep312
+- ep313
+- ep314
+- ep315
+- ep316
+- ep317
+- ep318
+- ep319
+- ep320
+- ep321
+- ep322
+- ep323
+- ep324
+- ep325
+- ep351
+- ep352
+- ep353
+- ep354
+- ep355
+- ep356
+- ep357
+- ep358
+- ep359
+- ep360
+- ep361
+- ep362
+- ep363
+- ep364
+- ep365
+- ep366
+- ep367
+- ep368
+- ep369
+- ep370
+- ep371
+- ep372
+- ep373
+- ep374
+- ep375
+confidence: hedged
+---
+
+# Preconditions
+- The object is located in a single, identifiable receptacle.
+- The destination is a valid receptacle that can accept the object.
+
+# Steps
+1. confirm <obj> is at <place>
+2. take <obj> from <place>
+3. move <obj> to <destination>
+
+# Pitfalls
+- If the object is not found in the expected location, the robot may attempt to take it from an incorrect receptacle.
+- If the destination is not valid or cannot accept the object, the robot may fail to complete the task.
+- When the object is not found in the initial location, the robot may not systematically search multiple receptacles, leading to repeated failures.
+- The robot may fail to confirm the object's identity before moving it, leading to the wrong object being placed in the destination.
+
+# Not established
+- Whether the procedure applies to objects that require transformation (e.g., cleaning or cooling) before placement.
+- Whether the procedure applies to objects that are not found in the initial search and require additional steps to locate.
+- Whether the robot can distinguish between multiple identical objects in different locations.

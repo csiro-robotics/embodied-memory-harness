@@ -1,0 +1,14 @@
+# No-memory baseline — unified protocol. The single shared baseline all arms' lift is
+# measured against (replaces the 4 divergent per-harness baselines). Inherits the frozen
+# _base.yaml; only the memory: block differs.
+#
+#   slurm/submit.sh no_memory
+extends: _base.yaml
+
+train:
+  memory:
+    type: no_memory
+
+eval:
+  memory:
+    type: no_memory

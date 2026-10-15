@@ -1,0 +1,35 @@
+=== A. did the memory's search hint name a place where the object starts? ===
+wiki  first place right         189 eps (47.0%)  success  75.7%  never saw   5.8%  control on same tasks  11.1%
+wiki  no hint                    26 eps ( 6.5%)  success  57.7%  never saw  34.6%  control on same tasks  23.1%
+wiki  right place named later    93 eps (23.1%)  success  37.6%  never saw  32.3%  control on same tasks   7.2%
+wiki  right place not named      94 eps (23.4%)  success  10.6%  never saw  75.5%  control on same tasks  13.1%
+kg    first place right         139 eps (34.6%)  success  74.1%  never saw   9.4%  control on same tasks  10.1%
+kg    no hint                   176 eps (43.8%)  success  42.0%  never saw  36.4%  control on same tasks  10.4%
+kg    right place named later     6 eps ( 1.5%)  success  33.3%  never saw  33.3%  control on same tasks  44.4%
+kg    right place not named      81 eps (20.1%)  success  24.7%  never saw  60.5%  control on same tasks  13.6%
+pm    first place right         108 eps (26.9%)  success  26.9%  never saw  16.7%  control on same tasks  15.4%
+pm    no hint                   232 eps (57.7%)  success  16.8%  never saw  48.3%  control on same tasks  11.2%
+pm    right place named later    52 eps (12.9%)  success  38.5%  never saw  30.8%  control on same tasks   6.4%
+pm    right place not named      10 eps ( 2.5%)  success   0.0%  never saw 100.0%  control on same tasks   0.0%
+
+=== B. PM procedure at step 0, 500 vs 1,500 training games ===
+500 (3 reps)   all                      procedure at start 170/402 (42.3%)  success with 49/170  without 39/232
+500 (3 reps)   examine_in_light         procedure at start  54/ 54 (100.0%)  success with 7/54  without 0/0
+500 (3 reps)   pick_and_place           procedure at start  29/ 72 (40.3%)  success with 13/29  without 12/43
+500 (3 reps)   pick_clean_then_place    procedure at start  41/ 93 (44.1%)  success with 3/41  without 4/52
+500 (3 reps)   pick_cool_then_place     procedure at start   0/ 63 ( 0.0%)  success with 0/0  without 1/63
+500 (3 reps)   pick_heat_then_place     procedure at start   0/ 69 ( 0.0%)  success with 0/0  without 21/69
+500 (3 reps)   pick_two_obj_and_place   procedure at start  46/ 51 (90.2%)  success with 26/46  without 1/5
+1500           all                      procedure at start  30/134 (22.4%)  success with 10/30  without 35/104
+1500           examine_in_light         procedure at start  18/ 18 (100.0%)  success with 6/18  without 0/0
+1500           pick_and_place           procedure at start   5/ 24 (20.8%)  success with 2/5  without 7/19
+1500           pick_clean_then_place    procedure at start   2/ 31 ( 6.5%)  success with 0/2  without 13/29
+1500           pick_cool_then_place     procedure at start   0/ 21 ( 0.0%)  success with 0/0  without 0/21
+1500           pick_heat_then_place     procedure at start   0/ 23 ( 0.0%)  success with 0/0  without 9/23
+1500           pick_two_obj_and_place   procedure at start   5/ 17 (29.4%)  success with 2/5  without 6/12
+
+=== C. overlap of solved tasks, Wiki and KG ===
+replicate 1: both 50, Wiki only 24, KG only 25, union 99
+replicate 2: both 46, Wiki only 28, KG only 23, union 97
+replicate 3: both 36, Wiki only 19, KG only 19, union 74
+solved at least once: Wiki 95, KG 89, PM 45, Wiki or KG 113, all three 116, PM only 3

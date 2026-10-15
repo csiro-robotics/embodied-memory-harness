@@ -1,0 +1,516 @@
+{
+  "memory_type": "wiki_v3",
+  "memory_injection": {
+    "episodes_measured": 500,
+    "steps_total": 14884,
+    "retrieval_rate": 0.966,
+    "retrieval_steps_per_episode": 28.75,
+    "offered_tokens_per_episode": 1331.1,
+    "injected_tokens_per_episode": 1331.1,
+    "offered_tokens_per_step": 44.7,
+    "injected_tokens_per_step": 44.7,
+    "discarded_fraction": 0.0,
+    "truncated_step_rate": 0.0,
+    "peak_offered_tokens": 82
+  },
+  "memory_update_totals": {
+    "episode_index": 125250,
+    "observations_recorded": 14948,
+    "actions_attested": 1595,
+    "consolidated": 20,
+    "n_sources": 500,
+    "n_llm_calls": 140,
+    "n_findings": 120,
+    "n_rejected_outcome": 0,
+    "n_rejected_claims": 0,
+    "pass": 210,
+    "store": {
+      "n_pages": 260,
+      "total_words": 31870
+    }
+  },
+  "memory_timing_per_episode_s": {
+    "retrieve_s": 1.686,
+    "action_s": 10.106,
+    "update_s": 1.95
+  },
+  "action_model": "qwen3:14b",
+  "memory_model": "qwen3:14b",
+  "n": 500,
+  "n_success": 256,
+  "sr": 0.512,
+  "elapsed_s": 8431.8,
+  "avg_ep_s": 16.9,
+  "steps": {
+    "avg": 29.8,
+    "avg_ok": 10.5,
+    "avg_fail": 50.0
+  },
+  "token_usage": {
+    "action": {
+      "prompt_tokens": 17559421,
+      "completion_tokens": 103361,
+      "total_tokens": 17662782,
+      "n_calls": 15076
+    },
+    "memory": {
+      "prompt_tokens": 1256102,
+      "completion_tokens": 81147,
+      "total_tokens": 1337249,
+      "n_calls": 1104
+    },
+    "total": {
+      "prompt_tokens": 18815523,
+      "completion_tokens": 184508,
+      "total_tokens": 19000031,
+      "n_calls": 16180
+    },
+    "action_pick_paths": {
+      "digit": 14689,
+      "range_retry_clamped": 147,
+      "edit_distance": 1,
+      "range_retry_digit": 45,
+      "digit_leading": 2
+    },
+    "transport_retries": {
+      "action": 0,
+      "memory": 0
+    },
+    "length_stops": {
+      "action": 0,
+      "memory": 0
+    },
+    "calls_per_episode": {
+      "action": 30.15,
+      "memory": 2.21
+    }
+  },
+  "per_family": {
+    "examine_in_light": {
+      "n": 43,
+      "success": 12,
+      "rate": 0.27906976744186046,
+      "avg_steps_ok": 7.5,
+      "avg_steps_fail": 50.0
+    },
+    "pick_and_place": {
+      "n": 111,
+      "success": 83,
+      "rate": 0.7477477477477478,
+      "avg_steps_ok": 5.771084337349397,
+      "avg_steps_fail": 50.0
+    },
+    "pick_clean_then_place": {
+      "n": 91,
+      "success": 48,
+      "rate": 0.5274725274725275,
+      "avg_steps_ok": 10.25,
+      "avg_steps_fail": 50.0
+    },
+    "pick_cool_then_place": {
+      "n": 75,
+      "success": 24,
+      "rate": 0.32,
+      "avg_steps_ok": 19.208333333333332,
+      "avg_steps_fail": 50.0
+    },
+    "pick_heat_then_place": {
+      "n": 65,
+      "success": 22,
+      "rate": 0.3384615384615385,
+      "avg_steps_ok": 17.40909090909091,
+      "avg_steps_fail": 50.0
+    },
+    "pick_two_obj_and_place": {
+      "n": 115,
+      "success": 67,
+      "rate": 0.5826086956521739,
+      "avg_steps_ok": 11.626865671641792,
+      "avg_steps_fail": 50.0
+    }
+  },
+  "sr_windows": [
+    {
+      "start": 1,
+      "end": 10,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 11,
+      "end": 20,
+      "n": 10,
+      "success": 1,
+      "rate": 0.1
+    },
+    {
+      "start": 21,
+      "end": 30,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 31,
+      "end": 40,
+      "n": 10,
+      "success": 7,
+      "rate": 0.7
+    },
+    {
+      "start": 41,
+      "end": 50,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 51,
+      "end": 60,
+      "n": 10,
+      "success": 9,
+      "rate": 0.9
+    },
+    {
+      "start": 61,
+      "end": 70,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 71,
+      "end": 80,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 81,
+      "end": 90,
+      "n": 10,
+      "success": 8,
+      "rate": 0.8
+    },
+    {
+      "start": 91,
+      "end": 100,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 101,
+      "end": 110,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 111,
+      "end": 120,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 121,
+      "end": 130,
+      "n": 10,
+      "success": 8,
+      "rate": 0.8
+    },
+    {
+      "start": 131,
+      "end": 140,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 141,
+      "end": 150,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 151,
+      "end": 160,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 161,
+      "end": 170,
+      "n": 10,
+      "success": 7,
+      "rate": 0.7
+    },
+    {
+      "start": 171,
+      "end": 180,
+      "n": 10,
+      "success": 7,
+      "rate": 0.7
+    },
+    {
+      "start": 181,
+      "end": 190,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 191,
+      "end": 200,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 201,
+      "end": 210,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 211,
+      "end": 220,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 221,
+      "end": 230,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 231,
+      "end": 240,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 241,
+      "end": 250,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 251,
+      "end": 260,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 261,
+      "end": 270,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 271,
+      "end": 280,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 281,
+      "end": 290,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 291,
+      "end": 300,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 301,
+      "end": 310,
+      "n": 10,
+      "success": 7,
+      "rate": 0.7
+    },
+    {
+      "start": 311,
+      "end": 320,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 321,
+      "end": 330,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 331,
+      "end": 340,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 341,
+      "end": 350,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 351,
+      "end": 360,
+      "n": 10,
+      "success": 7,
+      "rate": 0.7
+    },
+    {
+      "start": 361,
+      "end": 370,
+      "n": 10,
+      "success": 7,
+      "rate": 0.7
+    },
+    {
+      "start": 371,
+      "end": 380,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 381,
+      "end": 390,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 391,
+      "end": 400,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 401,
+      "end": 410,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 411,
+      "end": 420,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 421,
+      "end": 430,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 431,
+      "end": 440,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 441,
+      "end": 450,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 451,
+      "end": 460,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 461,
+      "end": 470,
+      "n": 10,
+      "success": 9,
+      "rate": 0.9
+    },
+    {
+      "start": 471,
+      "end": 480,
+      "n": 10,
+      "success": 7,
+      "rate": 0.7
+    },
+    {
+      "start": 481,
+      "end": 490,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 491,
+      "end": 500,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    }
+  ],
+  "memory_stats": {
+    "episodes": 500,
+    "episodes_this_phase": 500,
+    "consolidations": 20,
+    "read_llm_calls": 964,
+    "read_errors": 0,
+    "consolidation_llm_calls": 140,
+    "memory_llm_calls_per_episode": 2.208,
+    "priors_objects": 59,
+    "priors_observations": 14948,
+    "evidence_forms": 713,
+    "n_pages": 13,
+    "by_type": {
+      "entity": 1,
+      "procedure": 11,
+      "caution": 1
+    },
+    "total_words": 1895
+  },
+  "deviations": [
+    {
+      "key": "train.memory_llm.max_tokens",
+      "reason": "Consolidation emits whole Markdown pages; action selection emits a single integer. Applies only to the memory path."
+    },
+    {
+      "key": "eval.memory_llm.max_tokens",
+      "reason": "Same as train.memory_llm.max_tokens (read path only; writes are frozen at eval)."
+    }
+  ],
+  "replicate": 3,
+  "seed": 44,
+  "errored_episodes": 0
+}

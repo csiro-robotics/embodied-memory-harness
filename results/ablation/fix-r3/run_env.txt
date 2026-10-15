@@ -1,0 +1,2 @@
+replicate: 3
+train_tasks: /home/user/mh42_scratch2/project/train500_v2

@@ -1,0 +1,312 @@
+[
+  {
+    "graph_edges": 215,
+    "recipe_families": 5,
+    "episodic_steps": 1618,
+    "indexed_triplets": 215,
+    "edges_by_relation": {
+      "found-at": 204,
+      "affords": 4,
+      "requires": 2,
+      "precedes": 5
+    },
+    "extractor": {
+      "calls": 1618,
+      "raw": 6101,
+      "kept": 5240,
+      "discarded": 841,
+      "parse_failures": 1
+    },
+    "embed_calls": 1831,
+    "embed_texts": 4118,
+    "retrieve_calls": 1618,
+    "retrieve_cache_hits": 159,
+    "retrieve_errors": 0,
+    "planner": {
+      "calls": 49,
+      "failures": 0,
+      "unparsed": 0
+    },
+    "ep": 50,
+    "sr_so_far": 0.46
+  },
+  {
+    "graph_edges": 287,
+    "recipe_families": 6,
+    "episodic_steps": 3132,
+    "indexed_triplets": 287,
+    "edges_by_relation": {
+      "found-at": 264,
+      "affords": 4,
+      "requires": 3,
+      "precedes": 16
+    },
+    "extractor": {
+      "calls": 3132,
+      "raw": 11004,
+      "kept": 9286,
+      "discarded": 1684,
+      "parse_failures": 1
+    },
+    "embed_calls": 3741,
+    "embed_texts": 8319,
+    "retrieve_calls": 3132,
+    "retrieve_cache_hits": 203,
+    "retrieve_errors": 0,
+    "planner": {
+      "calls": 99,
+      "failures": 0,
+      "unparsed": 0
+    },
+    "ep": 100,
+    "sr_so_far": 0.49
+  },
+  {
+    "graph_edges": 324,
+    "recipe_families": 6,
+    "episodic_steps": 4755,
+    "indexed_triplets": 324,
+    "edges_by_relation": {
+      "found-at": 301,
+      "affords": 4,
+      "requires": 3,
+      "precedes": 16
+    },
+    "extractor": {
+      "calls": 4755,
+      "raw": 17297,
+      "kept": 14758,
+      "discarded": 2486,
+      "parse_failures": 7
+    },
+    "embed_calls": 5619,
+    "embed_texts": 12453,
+    "retrieve_calls": 4755,
+    "retrieve_cache_hits": 373,
+    "retrieve_errors": 0,
+    "planner": {
+      "calls": 149,
+      "failures": 0,
+      "unparsed": 0
+    },
+    "ep": 150,
+    "sr_so_far": 0.47333333333333333
+  },
+  {
+    "graph_edges": 356,
+    "recipe_families": 6,
+    "episodic_steps": 6165,
+    "indexed_triplets": 356,
+    "edges_by_relation": {
+      "found-at": 331,
+      "affords": 4,
+      "requires": 3,
+      "precedes": 18
+    },
+    "extractor": {
+      "calls": 6165,
+      "raw": 21991,
+      "kept": 18800,
+      "discarded": 3126,
+      "parse_failures": 18
+    },
+    "embed_calls": 7307,
+    "embed_texts": 16188,
+    "retrieve_calls": 6165,
+    "retrieve_cache_hits": 520,
+    "retrieve_errors": 0,
+    "planner": {
+      "calls": 199,
+      "failures": 0,
+      "unparsed": 0
+    },
+    "ep": 200,
+    "sr_so_far": 0.49
+  },
+  {
+    "graph_edges": 375,
+    "recipe_families": 6,
+    "episodic_steps": 7748,
+    "indexed_triplets": 375,
+    "edges_by_relation": {
+      "found-at": 348,
+      "affords": 4,
+      "requires": 3,
+      "precedes": 20
+    },
+    "extractor": {
+      "calls": 7748,
+      "raw": 27250,
+      "kept": 23255,
+      "discarded": 3922,
+      "parse_failures": 22
+    },
+    "embed_calls": 9251,
+    "embed_texts": 20446,
+    "retrieve_calls": 7748,
+    "retrieve_cache_hits": 616,
+    "retrieve_errors": 0,
+    "planner": {
+      "calls": 249,
+      "failures": 0,
+      "unparsed": 0
+    },
+    "ep": 250,
+    "sr_so_far": 0.5
+  },
+  {
+    "graph_edges": 400,
+    "recipe_families": 6,
+    "episodic_steps": 9357,
+    "indexed_triplets": 400,
+    "edges_by_relation": {
+      "found-at": 365,
+      "affords": 4,
+      "requires": 4,
+      "precedes": 27
+    },
+    "extractor": {
+      "calls": 9357,
+      "raw": 33098,
+      "kept": 28512,
+      "discarded": 4487,
+      "parse_failures": 49
+    },
+    "embed_calls": 11120,
+    "embed_texts": 24580,
+    "retrieve_calls": 9357,
+    "retrieve_cache_hits": 789,
+    "retrieve_errors": 0,
+    "planner": {
+      "calls": 299,
+      "failures": 0,
+      "unparsed": 0
+    },
+    "ep": 300,
+    "sr_so_far": 0.49333333333333335
+  },
+  {
+    "graph_edges": 430,
+    "recipe_families": 6,
+    "episodic_steps": 10906,
+    "indexed_triplets": 430,
+    "edges_by_relation": {
+      "found-at": 382,
+      "affords": 4,
+      "requires": 10,
+      "precedes": 34
+    },
+    "extractor": {
+      "calls": 10906,
+      "raw": 37696,
+      "kept": 32586,
+      "discarded": 5002,
+      "parse_failures": 80
+    },
+    "embed_calls": 12983,
+    "embed_texts": 28627,
+    "retrieve_calls": 10906,
+    "retrieve_cache_hits": 901,
+    "retrieve_errors": 0,
+    "planner": {
+      "calls": 349,
+      "failures": 0,
+      "unparsed": 0
+    },
+    "ep": 350,
+    "sr_so_far": 0.49714285714285716
+  },
+  {
+    "graph_edges": 440,
+    "recipe_families": 6,
+    "episodic_steps": 12583,
+    "indexed_triplets": 440,
+    "edges_by_relation": {
+      "found-at": 392,
+      "affords": 4,
+      "requires": 10,
+      "precedes": 34
+    },
+    "extractor": {
+      "calls": 12583,
+      "raw": 43591,
+      "kept": 37547,
+      "discarded": 5929,
+      "parse_failures": 117
+    },
+    "embed_calls": 15039,
+    "embed_texts": 33122,
+    "retrieve_calls": 12583,
+    "retrieve_cache_hits": 955,
+    "retrieve_errors": 0,
+    "planner": {
+      "calls": 399,
+      "failures": 0,
+      "unparsed": 0
+    },
+    "ep": 400,
+    "sr_so_far": 0.49
+  },
+  {
+    "graph_edges": 448,
+    "recipe_families": 6,
+    "episodic_steps": 14202,
+    "indexed_triplets": 448,
+    "edges_by_relation": {
+      "found-at": 400,
+      "affords": 4,
+      "requires": 10,
+      "precedes": 34
+    },
+    "extractor": {
+      "calls": 14202,
+      "raw": 48550,
+      "kept": 41858,
+      "discarded": 6565,
+      "parse_failures": 130
+    },
+    "embed_calls": 16973,
+    "embed_texts": 37363,
+    "retrieve_calls": 14202,
+    "retrieve_cache_hits": 1086,
+    "retrieve_errors": 0,
+    "planner": {
+      "calls": 449,
+      "failures": 0,
+      "unparsed": 0
+    },
+    "ep": 450,
+    "sr_so_far": 0.4888888888888889
+  },
+  {
+    "graph_edges": 457,
+    "recipe_families": 6,
+    "episodic_steps": 15714,
+    "indexed_triplets": 457,
+    "edges_by_relation": {
+      "found-at": 407,
+      "affords": 4,
+      "requires": 10,
+      "precedes": 36
+    },
+    "extractor": {
+      "calls": 15714,
+      "raw": 53703,
+      "kept": 46190,
+      "discarded": 7362,
+      "parse_failures": 172
+    },
+    "embed_calls": 18876,
+    "embed_texts": 41576,
+    "retrieve_calls": 15714,
+    "retrieve_cache_hits": 1170,
+    "retrieve_errors": 0,
+    "planner": {
+      "calls": 499,
+      "failures": 0,
+      "unparsed": 0
+    },
+    "ep": 500,
+    "sr_so_far": 0.494
+  }
+]

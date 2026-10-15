@@ -1,0 +1,1243 @@
+{
+  "memory_type": "macla",
+  "memory_injection": {
+    "episodes_measured": 1500,
+    "steps_total": 56527,
+    "retrieval_rate": 0.4,
+    "retrieval_steps_per_episode": 15.07,
+    "offered_tokens_per_episode": 1652.9,
+    "injected_tokens_per_episode": 1652.9,
+    "offered_tokens_per_step": 43.9,
+    "injected_tokens_per_step": 43.9,
+    "discarded_fraction": 0.0,
+    "truncated_step_rate": 0.0,
+    "peak_offered_tokens": 235
+  },
+  "memory_update_totals": {
+    "segment_llm": 1499,
+    "failure_segment_kept": 535,
+    "dup_checks": 137,
+    "inserted": 112,
+    "segments_stored": 1662,
+    "meta_procedure": {
+      "none": 1400,
+      "created": 10,
+      "exists": 90
+    },
+    "credited": 5875,
+    "credited_success": 4016,
+    "memory_llm_calls": 3157,
+    "theta_conf": -919.8830000000038,
+    "n_procedures_after": 112,
+    "n_meta_procedures_after": 10,
+    "merged": 1552,
+    "refine_calls": 1657,
+    "failure_segment_off_target": 14,
+    "refine_steps_changed": 3,
+    "segment_fallback": 1
+  },
+  "memory_timing_per_episode_s": {
+    "retrieve_s": 0.671,
+    "action_s": 13.261,
+    "update_s": 9.818
+  },
+  "action_model": "qwen3:14b",
+  "memory_model": "qwen3:14b",
+  "n": 1500,
+  "n_success": 515,
+  "sr": 0.3433333333333333,
+  "elapsed_s": 40558.8,
+  "avg_ep_s": 27.0,
+  "steps": {
+    "avg": 37.7,
+    "avg_ok": 14.1,
+    "avg_fail": 50.0
+  },
+  "token_usage": {
+    "action": {
+      "prompt_tokens": 66497300,
+      "completion_tokens": 397325,
+      "total_tokens": 66894625,
+      "n_calls": 57153
+    },
+    "memory": {
+      "prompt_tokens": 6690938,
+      "completion_tokens": 763591,
+      "total_tokens": 7454529,
+      "n_calls": 3157
+    },
+    "total": {
+      "prompt_tokens": 73188238,
+      "completion_tokens": 1160916,
+      "total_tokens": 74349154,
+      "n_calls": 60310
+    },
+    "action_pick_paths": {
+      "digit": 55840,
+      "range_retry_digit": 235,
+      "range_retry_clamped": 391,
+      "text_substring": 24,
+      "edit_distance": 15,
+      "digit_in_text": 1,
+      "digit_leading": 21
+    },
+    "transport_retries": {
+      "action": 0,
+      "memory": 0
+    },
+    "length_stops": {
+      "action": 1,
+      "memory": 94
+    },
+    "calls_per_episode": {
+      "action": 38.1,
+      "memory": 2.1
+    }
+  },
+  "per_family": {
+    "examine_in_light": {
+      "n": 130,
+      "success": 51,
+      "rate": 0.3923076923076923,
+      "avg_steps_ok": 10.705882352941176,
+      "avg_steps_fail": 50.0
+    },
+    "pick_and_place": {
+      "n": 334,
+      "success": 167,
+      "rate": 0.5,
+      "avg_steps_ok": 9.62874251497006,
+      "avg_steps_fail": 50.0
+    },
+    "pick_clean_then_place": {
+      "n": 274,
+      "success": 82,
+      "rate": 0.29927007299270075,
+      "avg_steps_ok": 16.926829268292682,
+      "avg_steps_fail": 50.0
+    },
+    "pick_cool_then_place": {
+      "n": 225,
+      "success": 7,
+      "rate": 0.03111111111111111,
+      "avg_steps_ok": 34.0,
+      "avg_steps_fail": 50.0
+    },
+    "pick_heat_then_place": {
+      "n": 194,
+      "success": 66,
+      "rate": 0.3402061855670103,
+      "avg_steps_ok": 18.575757575757574,
+      "avg_steps_fail": 50.0
+    },
+    "pick_two_obj_and_place": {
+      "n": 343,
+      "success": 142,
+      "rate": 0.4139941690962099,
+      "avg_steps_ok": 15.992957746478874,
+      "avg_steps_fail": 50.0
+    }
+  },
+  "sr_windows": [
+    {
+      "start": 1,
+      "end": 10,
+      "n": 10,
+      "success": 1,
+      "rate": 0.1
+    },
+    {
+      "start": 11,
+      "end": 20,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 21,
+      "end": 30,
+      "n": 10,
+      "success": 1,
+      "rate": 0.1
+    },
+    {
+      "start": 31,
+      "end": 40,
+      "n": 10,
+      "success": 1,
+      "rate": 0.1
+    },
+    {
+      "start": 41,
+      "end": 50,
+      "n": 10,
+      "success": 1,
+      "rate": 0.1
+    },
+    {
+      "start": 51,
+      "end": 60,
+      "n": 10,
+      "success": 1,
+      "rate": 0.1
+    },
+    {
+      "start": 61,
+      "end": 70,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 71,
+      "end": 80,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 81,
+      "end": 90,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 91,
+      "end": 100,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 101,
+      "end": 110,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 111,
+      "end": 120,
+      "n": 10,
+      "success": 0,
+      "rate": 0.0
+    },
+    {
+      "start": 121,
+      "end": 130,
+      "n": 10,
+      "success": 1,
+      "rate": 0.1
+    },
+    {
+      "start": 131,
+      "end": 140,
+      "n": 10,
+      "success": 1,
+      "rate": 0.1
+    },
+    {
+      "start": 141,
+      "end": 150,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 151,
+      "end": 160,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 161,
+      "end": 170,
+      "n": 10,
+      "success": 1,
+      "rate": 0.1
+    },
+    {
+      "start": 171,
+      "end": 180,
+      "n": 10,
+      "success": 1,
+      "rate": 0.1
+    },
+    {
+      "start": 181,
+      "end": 190,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 191,
+      "end": 200,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 201,
+      "end": 210,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 211,
+      "end": 220,
+      "n": 10,
+      "success": 1,
+      "rate": 0.1
+    },
+    {
+      "start": 221,
+      "end": 230,
+      "n": 10,
+      "success": 1,
+      "rate": 0.1
+    },
+    {
+      "start": 231,
+      "end": 240,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 241,
+      "end": 250,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 251,
+      "end": 260,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 261,
+      "end": 270,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 271,
+      "end": 280,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 281,
+      "end": 290,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 291,
+      "end": 300,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 301,
+      "end": 310,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 311,
+      "end": 320,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 321,
+      "end": 330,
+      "n": 10,
+      "success": 1,
+      "rate": 0.1
+    },
+    {
+      "start": 331,
+      "end": 340,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 341,
+      "end": 350,
+      "n": 10,
+      "success": 1,
+      "rate": 0.1
+    },
+    {
+      "start": 351,
+      "end": 360,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 361,
+      "end": 370,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 371,
+      "end": 380,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 381,
+      "end": 390,
+      "n": 10,
+      "success": 0,
+      "rate": 0.0
+    },
+    {
+      "start": 391,
+      "end": 400,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 401,
+      "end": 410,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 411,
+      "end": 420,
+      "n": 10,
+      "success": 1,
+      "rate": 0.1
+    },
+    {
+      "start": 421,
+      "end": 430,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 431,
+      "end": 440,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 441,
+      "end": 450,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 451,
+      "end": 460,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 461,
+      "end": 470,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 471,
+      "end": 480,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 481,
+      "end": 490,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 491,
+      "end": 500,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 501,
+      "end": 510,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 511,
+      "end": 520,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 521,
+      "end": 530,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 531,
+      "end": 540,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 541,
+      "end": 550,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 551,
+      "end": 560,
+      "n": 10,
+      "success": 1,
+      "rate": 0.1
+    },
+    {
+      "start": 561,
+      "end": 570,
+      "n": 10,
+      "success": 0,
+      "rate": 0.0
+    },
+    {
+      "start": 571,
+      "end": 580,
+      "n": 10,
+      "success": 1,
+      "rate": 0.1
+    },
+    {
+      "start": 581,
+      "end": 590,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 591,
+      "end": 600,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 601,
+      "end": 610,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 611,
+      "end": 620,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 621,
+      "end": 630,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 631,
+      "end": 640,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 641,
+      "end": 650,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 651,
+      "end": 660,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 661,
+      "end": 670,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 671,
+      "end": 680,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 681,
+      "end": 690,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 691,
+      "end": 700,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 701,
+      "end": 710,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 711,
+      "end": 720,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 721,
+      "end": 730,
+      "n": 10,
+      "success": 7,
+      "rate": 0.7
+    },
+    {
+      "start": 731,
+      "end": 740,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 741,
+      "end": 750,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 751,
+      "end": 760,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 761,
+      "end": 770,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 771,
+      "end": 780,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 781,
+      "end": 790,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 791,
+      "end": 800,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 801,
+      "end": 810,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 811,
+      "end": 820,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 821,
+      "end": 830,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 831,
+      "end": 840,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 841,
+      "end": 850,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 851,
+      "end": 860,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 861,
+      "end": 870,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 871,
+      "end": 880,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 881,
+      "end": 890,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 891,
+      "end": 900,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 901,
+      "end": 910,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 911,
+      "end": 920,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 921,
+      "end": 930,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 931,
+      "end": 940,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 941,
+      "end": 950,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 951,
+      "end": 960,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 961,
+      "end": 970,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 971,
+      "end": 980,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 981,
+      "end": 990,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 991,
+      "end": 1000,
+      "n": 10,
+      "success": 7,
+      "rate": 0.7
+    },
+    {
+      "start": 1001,
+      "end": 1010,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 1011,
+      "end": 1020,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 1021,
+      "end": 1030,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 1031,
+      "end": 1040,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 1041,
+      "end": 1050,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 1051,
+      "end": 1060,
+      "n": 10,
+      "success": 7,
+      "rate": 0.7
+    },
+    {
+      "start": 1061,
+      "end": 1070,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 1071,
+      "end": 1080,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 1081,
+      "end": 1090,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 1091,
+      "end": 1100,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 1101,
+      "end": 1110,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 1111,
+      "end": 1120,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 1121,
+      "end": 1130,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 1131,
+      "end": 1140,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 1141,
+      "end": 1150,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 1151,
+      "end": 1160,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 1161,
+      "end": 1170,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 1171,
+      "end": 1180,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 1181,
+      "end": 1190,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 1191,
+      "end": 1200,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 1201,
+      "end": 1210,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 1211,
+      "end": 1220,
+      "n": 10,
+      "success": 7,
+      "rate": 0.7
+    },
+    {
+      "start": 1221,
+      "end": 1230,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 1231,
+      "end": 1240,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 1241,
+      "end": 1250,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 1251,
+      "end": 1260,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 1261,
+      "end": 1270,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 1271,
+      "end": 1280,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 1281,
+      "end": 1290,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 1291,
+      "end": 1300,
+      "n": 10,
+      "success": 1,
+      "rate": 0.1
+    },
+    {
+      "start": 1301,
+      "end": 1310,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 1311,
+      "end": 1320,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 1321,
+      "end": 1330,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 1331,
+      "end": 1340,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 1341,
+      "end": 1350,
+      "n": 10,
+      "success": 9,
+      "rate": 0.9
+    },
+    {
+      "start": 1351,
+      "end": 1360,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 1361,
+      "end": 1370,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 1371,
+      "end": 1380,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 1381,
+      "end": 1390,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 1391,
+      "end": 1400,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 1401,
+      "end": 1410,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 1411,
+      "end": 1420,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 1421,
+      "end": 1430,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 1431,
+      "end": 1440,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 1441,
+      "end": 1450,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 1451,
+      "end": 1460,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 1461,
+      "end": 1470,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 1471,
+      "end": 1480,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 1481,
+      "end": 1490,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 1491,
+      "end": 1500,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    }
+  ],
+  "memory_stats": {
+    "n_procedures": 112,
+    "n_meta_procedures": 10,
+    "n_episodes": 1500,
+    "avg_posterior": 0.57,
+    "n_refined": 1657,
+    "n_ontology_categories": 76,
+    "theta_conf": -0.63,
+    "zero_shot_episodes": 146,
+    "procedures_by_verb": {
+      "move": 45,
+      "take": 37,
+      "heat": 9,
+      "slice": 2,
+      "use": 11,
+      "clean": 6,
+      "cool": 2
+    },
+    "memory_llm_calls": 3157,
+    "memory_prompt_tokens": 6690938,
+    "memory_completion_tokens": 763591,
+    "memory_llm_calls_per_episode": 2.105,
+    "memory_llm_errors": 0,
+    "events": {
+      "segment_llm": 1499,
+      "failure_segment_kept": 535,
+      "dup_checks": 137,
+      "inserted": 112,
+      "merged": 1552,
+      "refine_calls": 1657,
+      "meta_subprocedure_failed": 666,
+      "failure_segment_off_target": 14,
+      "refine_steps_changed": 3,
+      "segment_fallback": 1
+    },
+    "embedder_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41"
+  },
+  "deviations": [
+    {
+      "key": "eval_seen",
+      "reason": "Additional evaluation of the frozen store on 140 valid_seen tasks, written to eval_seen/. The test evaluation is unchanged."
+    },
+    {
+      "key": "train.env.num_episodes",
+      "reason": "Iteration round: training capped at 1500 episodes (protocol 500). All arms in the round share this value, so the comparison is internally valid; absolute SR is not comparable to a 500-episode protocol run."
+    }
+  ],
+  "replicate": 1,
+  "seed": 42,
+  "errored_episodes": 0
+}

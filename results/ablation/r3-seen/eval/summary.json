@@ -1,0 +1,262 @@
+{
+  "memory_type": "wiki_v3",
+  "memory_injection": {
+    "episodes_measured": 140,
+    "steps_total": 4330,
+    "retrieval_rate": 1.0,
+    "retrieval_steps_per_episode": 30.93,
+    "offered_tokens_per_episode": 1280.4,
+    "injected_tokens_per_episode": 1280.4,
+    "offered_tokens_per_step": 41.4,
+    "injected_tokens_per_step": 41.4,
+    "discarded_fraction": 0.0,
+    "truncated_step_rate": 0.0,
+    "peak_offered_tokens": 73
+  },
+  "memory_update_totals": null,
+  "memory_timing_per_episode_s": {
+    "retrieve_s": 1.84,
+    "action_s": 10.619,
+    "update_s": 0.0
+  },
+  "action_model": "qwen3:14b",
+  "memory_model": "qwen3:14b",
+  "n": 140,
+  "n_success": 65,
+  "sr": 0.4642857142857143,
+  "elapsed_s": 2158.6,
+  "avg_ep_s": 15.4,
+  "steps": {
+    "avg": 30.9,
+    "avg_ok": 8.9,
+    "avg_fail": 50.0
+  },
+  "token_usage": {
+    "action": {
+      "prompt_tokens": 5220241,
+      "completion_tokens": 30240,
+      "total_tokens": 5250481,
+      "n_calls": 4398
+    },
+    "memory": {
+      "prompt_tokens": 233464,
+      "completion_tokens": 9275,
+      "total_tokens": 242739,
+      "n_calls": 280
+    },
+    "total": {
+      "prompt_tokens": 5453705,
+      "completion_tokens": 39515,
+      "total_tokens": 5493220,
+      "n_calls": 4678
+    },
+    "action_pick_paths": {
+      "digit": 4262,
+      "range_retry_clamped": 50,
+      "range_retry_digit": 18
+    },
+    "transport_retries": {
+      "action": 0,
+      "memory": 0
+    },
+    "length_stops": {
+      "action": 0,
+      "memory": 0
+    },
+    "calls_per_episode": {
+      "action": 31.41,
+      "memory": 2.0
+    }
+  },
+  "per_family": {
+    "examine_in_light": {
+      "n": 13,
+      "success": 4,
+      "rate": 0.3076923076923077,
+      "avg_steps_ok": 3.0,
+      "avg_steps_fail": 50.0
+    },
+    "pick_and_place": {
+      "n": 35,
+      "success": 27,
+      "rate": 0.7714285714285715,
+      "avg_steps_ok": 5.7407407407407405,
+      "avg_steps_fail": 50.0
+    },
+    "pick_clean_then_place": {
+      "n": 27,
+      "success": 17,
+      "rate": 0.6296296296296297,
+      "avg_steps_ok": 9.882352941176471,
+      "avg_steps_fail": 50.0
+    },
+    "pick_cool_then_place": {
+      "n": 25,
+      "success": 3,
+      "rate": 0.12,
+      "avg_steps_ok": 22.0,
+      "avg_steps_fail": 50.0
+    },
+    "pick_heat_then_place": {
+      "n": 16,
+      "success": 3,
+      "rate": 0.1875,
+      "avg_steps_ok": 15.0,
+      "avg_steps_fail": 50.0
+    },
+    "pick_two_obj_and_place": {
+      "n": 24,
+      "success": 11,
+      "rate": 0.4583333333333333,
+      "avg_steps_ok": 12.181818181818182,
+      "avg_steps_fail": 50.0
+    }
+  },
+  "sr_windows": [
+    {
+      "start": 1,
+      "end": 10,
+      "n": 10,
+      "success": 7,
+      "rate": 0.7
+    },
+    {
+      "start": 11,
+      "end": 20,
+      "n": 10,
+      "success": 1,
+      "rate": 0.1
+    },
+    {
+      "start": 21,
+      "end": 30,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 31,
+      "end": 40,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 41,
+      "end": 50,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 51,
+      "end": 60,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 61,
+      "end": 70,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 71,
+      "end": 80,
+      "n": 10,
+      "success": 1,
+      "rate": 0.1
+    },
+    {
+      "start": 81,
+      "end": 90,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 91,
+      "end": 100,
+      "n": 10,
+      "success": 7,
+      "rate": 0.7
+    },
+    {
+      "start": 101,
+      "end": 110,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 111,
+      "end": 120,
+      "n": 10,
+      "success": 7,
+      "rate": 0.7
+    },
+    {
+      "start": 121,
+      "end": 130,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 131,
+      "end": 140,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    }
+  ],
+  "memory_stats": {
+    "episodes": 500,
+    "episodes_this_phase": 140,
+    "consolidations": 0,
+    "read_llm_calls": 280,
+    "read_errors": 0,
+    "consolidation_llm_calls": 0,
+    "memory_llm_calls_per_episode": 2.0,
+    "priors_objects": 59,
+    "priors_observations": 14948,
+    "evidence_forms": 713,
+    "n_pages": 13,
+    "by_type": {
+      "entity": 1,
+      "procedure": 11,
+      "caution": 1
+    },
+    "total_words": 1895
+  },
+  "deviations": [
+    {
+      "key": "train.memory_llm.max_tokens",
+      "reason": "Consolidation emits whole Markdown pages; action selection emits a single integer. Applies only to the memory path."
+    },
+    {
+      "key": "eval.memory_llm.max_tokens",
+      "reason": "Same as train.memory_llm.max_tokens (read path only; writes are frozen at eval)."
+    },
+    {
+      "key": "eval.env.num_episodes",
+      "reason": "Iteration round: eval capped at 140 episodes."
+    },
+    {
+      "key": "eval.env.train_eval",
+      "reason": "DEV ROUND: evaluated on eval_in_distribution (valid_seen), NOT the held-out test split. Used for iteration so that repeated selection does not overfit valid_unseen. This number is a dev score and must never be reported as the headline result."
+    }
+  ],
+  "errored_episodes": 0,
+  "trained_store_sha256": {
+    "before_eval": "f4b10900baf454c242e31df134ee37f36e5495a79a55e7f6a84910355638bc07",
+    "after_eval": "f4b10900baf454c242e31df134ee37f36e5495a79a55e7f6a84910355638bc07",
+    "unchanged": true
+  },
+  "eval_split": "eval_in_distribution",
+  "replicate": 3,
+  "seed": 44,
+  "is_dev": true
+}

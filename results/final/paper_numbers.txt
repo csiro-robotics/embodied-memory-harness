@@ -1,0 +1,81 @@
+######## 500 training games, three replicates per arm ########
+checks: 12 runs, the same 134 tasks, the same order within each replicate, 500 distinct training games per run
+
+=== evaluation success, % (mean [min, max] over 3 replicates) ===
+kg_hybrid  49.5 [41.0, 56.0]   solved 75/69/55 of 134
+wiki_v3    50.5 [41.0, 55.2]   solved 74/74/55 of 134
+macla      21.9 [20.9, 22.4]   solved 28/30/30 of 134
+no_memory  11.4 [11.2, 11.9]   solved 15/15/16 of 134
+
+=== evaluation success by task family, % ===
+family (n)                   kg_hybrid             wiki_v3               macla                 no_memory           
+examine_in_light (18)        42.6 [27.8, 61.1]     57.4 [22.2, 77.8]     13.0 [11.1, 16.7]     16.7 [16.7, 16.7]   
+pick_and_place (24)          62.5 [58.3, 66.7]     56.9 [50.0, 62.5]     34.7 [33.3, 37.5]     15.3 [12.5, 16.7]   
+pick_clean_then_place (31)   51.6 [41.9, 58.1]     60.2 [51.6, 67.7]     7.5 [3.2, 12.9]       9.7 [9.7, 9.7]      
+pick_cool_then_place (21)    36.5 [28.6, 42.9]     30.2 [19.0, 38.1]     1.6 [0.0, 4.8]        4.8 [4.8, 4.8]      
+pick_heat_then_place (23)    58.0 [47.8, 69.6]     31.9 [17.4, 39.1]     30.4 [21.7, 34.8]     20.3 [17.4, 21.7]   
+pick_two_obj_and_place (17)  39.2 [23.5, 47.1]     66.7 [64.7, 70.6]     52.9 [41.2, 64.7]     0.0 [0.0, 0.0]      
+
+=== paired comparisons ===
+per replicate: A-only / B-only tasks and exact McNemar p; pooled: mean difference [95% CI], sign-flip p
+kg_hybrid vs no_memory | 63/3 p=1.3e-15  57/3 p=6.3e-14  42/3 p=8.7e-10 | +38.1 pp [+30.3, +45.8]  p<1e-5
+wiki_v3   vs no_memory | 65/6 p=1.3e-13  65/6 p=1.3e-13  47/8 p=8.1e-08 | +39.1 pp [+30.6, +47.3]  p<1e-5
+macla     vs no_memory | 21/8 p=0.024  22/7 p=0.0081  22/8 p=0.016 | +10.4 pp [+3.7, +17.2]  p=0.0034
+kg_hybrid vs wiki_v3   | 25/24 p=1  23/28 p=0.58  19/19 p=1 |  -1.0 pp [-8.5, +6.5]  p=0.85
+kg_hybrid vs macla     | 52/5 p=6.4e-11  47/8 p=8.1e-08  39/14 p=0.0008 | +27.6 pp [+19.9, +35.6]  p<1e-5
+wiki_v3   vs macla     | 53/7 p=7.7e-10  53/9 p=1.1e-08  39/14 p=0.0008 | +28.6 pp [+20.6, +36.6]  p<1e-5
+
+=== tasks solved in at least one replicate ===
+kg_hybrid  solved in any replicate  89, in all three  46
+wiki_v3    solved in any replicate  95, in all three  42
+macla      solved in any replicate  45, in all three  16
+no_memory  solved in any replicate  16, in all three  14
+any memory arm: 116 of 134; no arm at all: 18
+
+=== training and cost, mean [min, max] over replicates ===
+                               kg_hybrid               wiki_v3                 macla                   no_memory             
+training success, %            52.3 [49.4, 54.4]       52.1 [51.0, 54.0]       29.1 [28.4, 29.6]       15.2 [14.8, 15.6]     
+eval steps, solved tasks       11.6 [10.3, 12.8]       14.0 [13.9, 14.3]       17.6 [16.7, 19.0]       22.0 [21.9, 22.1]     
+eval steps, all tasks          31.0 [28.6, 34.7]       31.9 [30.1, 35.2]       42.9 [42.7, 43.1]       46.8 [46.6, 46.9]     
+memory LLM calls / train ep    30.9 [29.8, 32.4]       2.2 [2.2, 2.2]          1.8 [1.8, 1.9]          0.0 [0.0, 0.0]        
+memory LLM calls / eval ep     1.0 [1.0, 1.0]          2.0 [2.0, 2.0]          0.0 [0.0, 0.0]          0.0 [0.0, 0.0]        
+action LLM calls / eval ep     31.1 [28.8, 34.8]       32.2 [30.3, 35.5]       43.4 [43.0, 43.7]       47.4 [47.3, 47.5]     
+memory tokens / eval step      518.9 [508.4, 526.0]    48.9 [42.3, 53.8]       39.9 [35.9, 42.5]       0.0 [0.0, 0.0]        
+memory tokens / eval ep        16043.8 [15039.1, 17653.7]  1547.3 [1488.7, 1630.9]  1710.1 [1543.2, 1831.6]  0.0 [0.0, 0.0]        
+peak memory tokens (eval)      840.0 [835.0, 847.0]    77.7 [73.0, 86.0]       171.3 [151.0, 197.0]    0.0 [0.0, 0.0]        
+steps cut to the budget, %     0.0 [0.0, 0.0]          0.0 [0.0, 0.0]          0.0 [0.0, 0.0]          0.0 [0.0, 0.0]        
+train time, h                  20.6 [19.6, 21.5]       2.3 [2.2, 2.3]          3.7 [3.6, 3.8]          2.6 [2.6, 2.6]        
+eval time, h                   2.9 [2.7, 3.3]          0.6 [0.5, 0.6]          0.7 [0.7, 0.7]          0.7 [0.7, 0.7]        
+seconds / eval ep              77.9 [72.6, 87.4]       15.2 [14.5, 16.5]       18.3 [18.1, 18.7]       18.2 [18.1, 18.4]     
+
+=== trained store, per replicate ===
+kg_hybrid  graph_edges 444/440/457  recipe_families 6/6/6  episodic_steps 14386/14825/15714
+wiki_v3    n_pages 13/13/13  total_words 1970/1645/1895  priors_objects 59/59/59  evidence_forms 715/690/713
+macla      n_procedures 81/64/74  n_meta_procedures 3/4/5  avg_posterior 0.576/0.55/0.575
+
+wrote results\final\paper_numbers.json
+
+
+######## 1,500 training games, one run per arm ########
+checks: 4 runs, the same 1,500 training games in the same order, 134 + 140 eval tasks
+
+           train %      test %       valid_seen % train % per 250 games
+kg_hybrid  48.4         53.0 (71)    46.4 (65)    47.2 53.6 46.0 50.0 48.4 45.2
+wiki_v3    50.0         53.7 (72)    53.6 (75)    43.6 58.8 51.2 49.2 48.0 49.2
+macla      34.3         33.6 (45)    45.7 (64)    18.8 28.4 34.0 42.8 40.8 41.2
+no_memory  14.5         11.2 (15)    14.3 (20)    13.2 13.2 15.6 17.6 11.6 16.0
+
+test split, exact McNemar against no_memory and between memory arms:
+  kg_hybrid vs no_memory 57/1 p=4.1e-16
+  wiki_v3   vs no_memory 64/7 p=1.3e-12
+  macla     vs no_memory 36/6 p=2.8e-06
+  kg_hybrid vs wiki_v3   22/23 p=1
+  kg_hybrid vs macla     39/13 p=0.00041
+  wiki_v3   vs macla     46/19 p=0.0011
+
+memory LLM calls / train ep    kg_hybrid 32.4  wiki_v3 2.3  macla 2.1  no_memory 0.0
+train time, h                  kg_hybrid 66.0  wiki_v3 7.0  macla 11.3  no_memory 7.8
+memory tokens / eval step      kg_hybrid 525.7  wiki_v3 52.7  macla 52.8  no_memory 0.0
+store: {"kg_hybrid": {"graph_edges": 542, "recipe_families": 6, "episodic_steps": 47036, "indexed_triplets": 542, "embed_calls": 57215, "embed_texts": 125975, "retrieve_calls": 47036, "retrieve_cache_hits": 2710, "retrieve_errors": 0}, "wiki_v3": {"episodes": 1500, "episodes_this_phase": 1500, "consolidations": 60, "read_llm_calls": 2965, "read_errors": 0, "consolidation_llm_calls": 420, "memory_llm_calls_per_episode": 2.257, "priors_objects": 60, "priors_observations": 47232, "evidence_forms": 1314, "n_pages": 13, "total_words": 2182}, "macla": {"n_procedures": 112, "n_meta_procedures": 10, "n_episodes": 1500, "avg_posterior": 0.57, "n_refined": 1657, "n_ontology_categories": 76, "theta_conf": -0.63, "zero_shot_episodes": 146, "memory_llm_calls": 3157, "memory_prompt_tokens": 6690938, "memory_completion_tokens": 763591, "memory_llm_calls_per_episode": 2.105, "memory_llm_errors": 0, "embedder_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41"}, "no_memory": {}}
+
+wrote results\final\paper_numbers.json

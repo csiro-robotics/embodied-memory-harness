@@ -1,0 +1,4 @@
+requested_context_length: 32768
+truncated_prompts: 0
+--- context settings in ollama_server.log (count, setting) ---
+--- context settings in ollama_memory_server.log (count, setting) ---

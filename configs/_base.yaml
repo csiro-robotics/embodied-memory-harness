@@ -1,0 +1,87 @@
+# ============================================================
+# _base.yaml — the FROZEN unified evaluation protocol (SDD §4.1)
+#
+# Per-arm configs inherit this with `extends: _base.yaml` and may override ONLY the
+# `memory:` block. Any attempt to change a frozen key (model, max_steps, history_window,
+# seed, num_episodes, train_eval, num_ctx, max_tokens, temperature,
+# memory_block_max_tokens, domain_randomization, alfworld_version, fewshot) HARD-FAILS at
+# load time via protocol_config.merge_and_guard.
+#
+# Determinism: seed controls both the frozen train-500 selection and the per-run shuffle,
+# identically for every arm. See src/alfworld_env.select_and_order_games.
+# ============================================================
+
+# Pinned ALFWorld release — the single env all arms run against (SDD §4.4).
+# Resolved from the M3 `wiki-pipeline` conda env (`pip show alfworld`), 2026-07-27.
+# Game-file identifiers are release-sensitive, so every arm must resolve this same
+# release; run_pipeline.py hard-fails if it is left unresolved.
+#
+# NOTE on the training set: the mounted `train500_v2` directory holds 500 distinct game
+# files (500 different checksums) in 438 task folders, since some folders hold more than
+# one game. A 500-episode phase therefore plays 500 distinct games with no repeats, as the
+# final runs' train/diagnostics.jsonl confirm. The earlier "438 games, ~62 repeats" note
+# counted folders. The list with checksums is assets/train500_games.txt.
+alfworld_version: "0.4.2"
+
+# Context window (H1). Ollama's OpenAI-compatible endpoint ignores a per-request num_ctx,
+# so the window is set once on the server (slurm/arm.slurm: OLLAMA_CONTEXT_LENGTH, one
+# parallel slot) and is the same for every request of every arm, action and memory alike.
+# num_ctx below records that value; run_pipeline.py fails if the server was started with
+# another. 32768 fits the longest prompt any arm sends (the wiki's consolidation input plus
+# its 4096-token output). Run 10 in fact ran at 4096 per request.
+
+seed: 42
+memory_block_max_tokens: 1024     # cap on injected memory context (SDD §3.2)
+fewshot: none                     # NO fixed few-shot scaffold for any arm (SDD §7).
+
+# Shared 500-task train set = the curated balanced train500_v2 set, mounted as the train
+# split by the slurm script (arm.slurm), exactly as the wiki V4 runs and the KG branch do.
+# So the SET comes from the data dir and the seed only fixes the ORDER (deterministic
+# shuffle, identical across arms). Leave train500_path null for that path. To instead pin
+# an explicit id list (e.g. running without the train500_v2 symlink), point this at a file
+# from scripts/build_train500.py and the env will intersect + hard-fail on shortfall.
+train500_path: null
+
+# ---------------------------------------------------------------------------
+# Phase 1: Training  (one pass, no pre-seeding)
+# ---------------------------------------------------------------------------
+train:
+  env:
+    train_eval: train
+    num_episodes: 500
+    max_steps: 50
+    domain_randomization: false   # keep AlfredDemangler deterministic (SDD §4.2 step 6)
+
+  action_llm:
+    model: qwen3:14b
+    base_url: http://localhost:11434/v1
+    api_key: ollama
+    temperature: 0.0
+    max_tokens: 512
+    num_ctx: 32768               # set on the server; see the note at the top
+
+  agent:
+    history_window: 20
+
+  # memory: supplied by the per-arm config (the ONLY block that may differ)
+
+# ---------------------------------------------------------------------------
+# Phase 2: Evaluation  (memory frozen via MemoryModule.freeze(), forced by runner)
+# ---------------------------------------------------------------------------
+eval:
+  env:
+    train_eval: eval_out_of_distribution
+    num_episodes: 134
+    max_steps: 50
+    domain_randomization: false
+
+  action_llm:
+    model: qwen3:14b
+    base_url: http://localhost:11434/v1
+    api_key: ollama
+    temperature: 0.0
+    max_tokens: 512
+    num_ctx: 32768               # set on the server; see the note at the top
+
+  agent:
+    history_window: 20

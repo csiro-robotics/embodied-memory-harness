@@ -1,0 +1,237 @@
+---
+name: object-location
+description: How to locate an object when it is not in the expected location, involving
+  systematic search and avoiding confusion.
+type: procedure
+applies_to:
+- pick_and_place
+- pick_heat_then_place
+- pick_cool_then_place
+- pick_clean_then_place
+- pick_two_obj_and_place
+objects:
+- pot
+- mug
+- toiletpaper
+- alarmclock
+sources:
+- ep1
+- ep2
+- ep3
+- ep4
+- ep5
+- ep6
+- ep7
+- ep8
+- ep9
+- ep10
+- ep11
+- ep12
+- ep13
+- ep14
+- ep15
+- ep16
+- ep17
+- ep18
+- ep19
+- ep20
+- ep21
+- ep22
+- ep23
+- ep24
+- ep25
+- ep51
+- ep52
+- ep53
+- ep54
+- ep55
+- ep56
+- ep57
+- ep58
+- ep59
+- ep60
+- ep61
+- ep62
+- ep63
+- ep64
+- ep65
+- ep66
+- ep67
+- ep68
+- ep69
+- ep70
+- ep71
+- ep72
+- ep73
+- ep74
+- ep75
+- ep151
+- ep152
+- ep153
+- ep154
+- ep155
+- ep156
+- ep157
+- ep158
+- ep159
+- ep160
+- ep161
+- ep162
+- ep163
+- ep164
+- ep165
+- ep166
+- ep167
+- ep168
+- ep169
+- ep170
+- ep171
+- ep172
+- ep173
+- ep174
+- ep175
+- ep176
+- ep177
+- ep178
+- ep179
+- ep180
+- ep181
+- ep182
+- ep183
+- ep184
+- ep185
+- ep186
+- ep187
+- ep188
+- ep189
+- ep190
+- ep191
+- ep192
+- ep193
+- ep194
+- ep195
+- ep196
+- ep197
+- ep198
+- ep199
+- ep200
+- ep226
+- ep227
+- ep228
+- ep229
+- ep230
+- ep231
+- ep232
+- ep233
+- ep234
+- ep235
+- ep236
+- ep237
+- ep238
+- ep239
+- ep240
+- ep241
+- ep242
+- ep243
+- ep244
+- ep245
+- ep246
+- ep247
+- ep248
+- ep249
+- ep250
+- ep301
+- ep302
+- ep303
+- ep304
+- ep305
+- ep306
+- ep307
+- ep308
+- ep309
+- ep310
+- ep311
+- ep312
+- ep313
+- ep314
+- ep315
+- ep316
+- ep317
+- ep318
+- ep319
+- ep320
+- ep321
+- ep322
+- ep323
+- ep324
+- ep325
+- ep351
+- ep352
+- ep353
+- ep354
+- ep355
+- ep356
+- ep357
+- ep358
+- ep359
+- ep360
+- ep361
+- ep362
+- ep363
+- ep364
+- ep365
+- ep366
+- ep367
+- ep368
+- ep369
+- ep370
+- ep371
+- ep372
+- ep373
+- ep374
+- ep375
+- ep401
+- ep402
+- ep403
+- ep404
+- ep405
+- ep406
+- ep407
+- ep408
+- ep409
+- ep410
+- ep411
+- ep412
+- ep413
+- ep414
+- ep415
+- ep416
+- ep417
+- ep418
+- ep419
+- ep420
+- ep421
+- ep422
+- ep423
+- ep424
+- ep425
+confidence: attested
+---
+
+# Preconditions
+- The object is not in the expected location.
+
+# Steps
+1. Check the expected location for the object.
+2. If the object is not found, search other nearby receptacles systematically.
+3. Avoid revisiting the same location multiple times.
+4. Use the correct tool or method to locate the object if necessary.
+5. Confirm the object's location before attempting to pick it up.
+
+# Pitfalls
+- Searching only one location may lead to failure if the object is elsewhere.
+- Picking up the wrong object may cause confusion and delay the task.
+
+# Not established
+- The exact number of receptacles to check before giving up.
+- Whether the robot should ask for help if the object is not found.

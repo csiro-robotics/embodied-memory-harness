@@ -1,0 +1,63 @@
+alfworld_version: 0.4.2
+deviations: []
+eval:
+  action_llm:
+    api_key: ollama
+    base_url: http://localhost:11434/v1
+    max_tokens: 512
+    model: qwen3:14b
+    num_ctx: 32768
+    temperature: 0.0
+  agent:
+    history_window: 20
+  env:
+    domain_randomization: false
+    max_steps: 50
+    num_episodes: 134
+    train_eval: eval_out_of_distribution
+  memory:
+    N_m: 50
+    N_p: 200
+    abort_after: 3
+    decay_episodes: 100
+    ontology_every: 100
+    refine_with_llm: true
+    segment_with_llm: true
+    show_locations: true
+    theta_dup: 0.85
+    theta_risk: 0.9
+    top_k_locations: 5
+    type: macla
+fewshot: none
+memory_block_max_tokens: 1024
+replicate: 2
+seed: 43
+train:
+  action_llm:
+    api_key: ollama
+    base_url: http://localhost:11434/v1
+    max_tokens: 512
+    model: qwen3:14b
+    num_ctx: 32768
+    temperature: 0.0
+  agent:
+    history_window: 20
+  env:
+    domain_randomization: false
+    max_steps: 50
+    num_episodes: 500
+    train_eval: train
+  memory:
+    N_m: 50
+    N_p: 200
+    abort_after: 3
+    decay_episodes: 100
+    ontology_every: 100
+    refine_with_llm: true
+    segment_with_llm: true
+    show_locations: true
+    theta_dup: 0.85
+    theta_risk: 0.9
+    top_k_locations: 5
+    type: macla
+train500_path: null

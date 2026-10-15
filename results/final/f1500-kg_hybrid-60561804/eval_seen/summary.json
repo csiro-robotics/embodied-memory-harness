@@ -1,0 +1,264 @@
+{
+  "memory_type": "kg_hybrid",
+  "memory_injection": {
+    "episodes_measured": 140,
+    "steps_total": 4347,
+    "retrieval_rate": 1.0,
+    "retrieval_steps_per_episode": 31.05,
+    "offered_tokens_per_episode": 16939.0,
+    "injected_tokens_per_episode": 16939.0,
+    "offered_tokens_per_step": 545.5,
+    "injected_tokens_per_step": 545.5,
+    "discarded_fraction": 0.0,
+    "truncated_step_rate": 0.0,
+    "peak_offered_tokens": 780
+  },
+  "memory_update_totals": null,
+  "memory_timing_per_episode_s": {
+    "retrieve_s": 67.248,
+    "action_s": 14.333,
+    "update_s": 0.0
+  },
+  "action_model": "qwen3:14b",
+  "memory_model": "qwen3:14b",
+  "n": 140,
+  "n_success": 65,
+  "sr": 0.4642857142857143,
+  "elapsed_s": 11898.4,
+  "avg_ep_s": 85.0,
+  "steps": {
+    "avg": 31.1,
+    "avg_ok": 9.2,
+    "avg_fail": 50.0
+  },
+  "token_usage": {
+    "action": {
+      "prompt_tokens": 7547883,
+      "completion_tokens": 29951,
+      "total_tokens": 7577834,
+      "n_calls": 4402
+    },
+    "memory": {
+      "prompt_tokens": 72547,
+      "completion_tokens": 8214,
+      "total_tokens": 80761,
+      "n_calls": 140
+    },
+    "total": {
+      "prompt_tokens": 7620430,
+      "completion_tokens": 38165,
+      "total_tokens": 7658595,
+      "n_calls": 4542
+    },
+    "action_pick_paths": {
+      "digit": 4292,
+      "range_retry_clamped": 35,
+      "range_retry_digit": 20
+    },
+    "transport_retries": {
+      "action": 0,
+      "memory": 0
+    },
+    "length_stops": {
+      "action": 0,
+      "memory": 0
+    },
+    "calls_per_episode": {
+      "action": 31.44,
+      "memory": 1.0
+    }
+  },
+  "per_family": {
+    "examine_in_light": {
+      "n": 13,
+      "success": 6,
+      "rate": 0.46153846153846156,
+      "avg_steps_ok": 10.666666666666666,
+      "avg_steps_fail": 50.0
+    },
+    "pick_and_place": {
+      "n": 35,
+      "success": 21,
+      "rate": 0.6,
+      "avg_steps_ok": 8.142857142857142,
+      "avg_steps_fail": 50.0
+    },
+    "pick_clean_then_place": {
+      "n": 27,
+      "success": 17,
+      "rate": 0.6296296296296297,
+      "avg_steps_ok": 9.176470588235293,
+      "avg_steps_fail": 50.0
+    },
+    "pick_cool_then_place": {
+      "n": 25,
+      "success": 4,
+      "rate": 0.16,
+      "avg_steps_ok": 8.0,
+      "avg_steps_fail": 50.0
+    },
+    "pick_heat_then_place": {
+      "n": 16,
+      "success": 7,
+      "rate": 0.4375,
+      "avg_steps_ok": 10.714285714285714,
+      "avg_steps_fail": 50.0
+    },
+    "pick_two_obj_and_place": {
+      "n": 24,
+      "success": 10,
+      "rate": 0.4166666666666667,
+      "avg_steps_ok": 9.9,
+      "avg_steps_fail": 50.0
+    }
+  },
+  "sr_windows": [
+    {
+      "start": 1,
+      "end": 10,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 11,
+      "end": 20,
+      "n": 10,
+      "success": 1,
+      "rate": 0.1
+    },
+    {
+      "start": 21,
+      "end": 30,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 31,
+      "end": 40,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 41,
+      "end": 50,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 51,
+      "end": 60,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 61,
+      "end": 70,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 71,
+      "end": 80,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 81,
+      "end": 90,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 91,
+      "end": 100,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 101,
+      "end": 110,
+      "n": 10,
+      "success": 7,
+      "rate": 0.7
+    },
+    {
+      "start": 111,
+      "end": 120,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 121,
+      "end": 130,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 131,
+      "end": 140,
+      "n": 10,
+      "success": 7,
+      "rate": 0.7
+    }
+  ],
+  "memory_stats": {
+    "graph_edges": 542,
+    "recipe_families": 6,
+    "episodic_steps": 47036,
+    "indexed_triplets": 542,
+    "edges_by_relation": {
+      "found-at": 469,
+      "precedes": 48,
+      "requires": 21,
+      "affords": 4
+    },
+    "extractor": {
+      "calls": 0,
+      "raw": 0,
+      "kept": 0,
+      "discarded": 0,
+      "parse_failures": 0
+    },
+    "embed_calls": 4200,
+    "embed_texts": 8389,
+    "retrieve_calls": 4347,
+    "retrieve_cache_hits": 204,
+    "retrieve_errors": 0,
+    "planner": {
+      "calls": 140,
+      "failures": 0,
+      "unparsed": 0
+    }
+  },
+  "deviations": [
+    {
+      "key": "eval_seen",
+      "reason": "Additional evaluation of the frozen store on 140 valid_seen tasks, written to eval_seen/. The test evaluation is unchanged."
+    },
+    {
+      "key": "train.env.num_episodes",
+      "reason": "Iteration round: training capped at 1500 episodes (protocol 500). All arms in the round share this value, so the comparison is internally valid; absolute SR is not comparable to a 500-episode protocol run."
+    }
+  ],
+  "errored_episodes": 0,
+  "trained_store_sha256": {
+    "before_eval": "bb6f847ac9444fe504dee4336097a862ad631dc1f8be94bdcfd2c2b6522cbf96",
+    "after_eval": "bb6f847ac9444fe504dee4336097a862ad631dc1f8be94bdcfd2c2b6522cbf96",
+    "unchanged": true
+  },
+  "eval_split": "eval_in_distribution",
+  "replicate": 1,
+  "seed": 42,
+  "is_dev": false
+}

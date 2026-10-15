@@ -1,0 +1,62 @@
+---
+name: index
+description: Which pages to read for which task. Regenerated at every consolidation.
+---
+
+# By task family
+- examine_in_light -> examine-in-light, search-strategy, step-limitation
+- pick_and_place -> object-location, object-recognition, pick-and-place, re-taking-objects, search-strategy, step-limitation, task-completion
+- pick_clean_then_place -> affordances, object-location, object-recognition, pick-and-place, pick-clean-then-place, search-strategy, step-limitation, task-completion
+- pick_cool_then_place -> affordances, object-location, object-recognition, pick-and-place, pick-cool-then-place, search-strategy, step-limitation, task-completion
+- pick_heat_then_place -> affordances, object-recognition, pick-and-place, pick-heat-then-place, search-strategy, task-completion
+- pick_two_obj_and_place -> object-location, object-recognition, pick-and-place, pick-two-obj-and-place, re-taking-objects, search-strategy, step-limitation, task-completion
+
+# By object
+- alarmclock -> object-recognition, pick-and-place, pick-two-obj-and-place, search-strategy, task-completion
+- apple -> object-location, object-recognition, pick-and-place, pick-cool-then-place, pick-heat-then-place, re-taking-objects, search-strategy, step-limitation, task-completion
+- book -> object-recognition, pick-and-place, step-limitation
+- bowl -> examine-in-light, object-recognition, pick-clean-then-place, search-strategy, step-limitation, task-completion
+- box -> object-recognition, task-completion
+- bread -> object-recognition
+- butterknife -> object-location, search-strategy, step-limitation
+- candle -> object-location, pick-and-place, re-taking-objects, step-limitation, task-completion
+- cd -> examine-in-light, object-location, re-taking-objects, search-strategy, step-limitation
+- cellphone -> object-location, pick-and-place, re-taking-objects, step-limitation
+- cloth -> search-strategy, task-completion
+- creditcard -> object-location, object-recognition, pick-and-place, re-taking-objects, search-strategy, task-completion
+- cup -> object-location, object-recognition, pick-and-place, pick-clean-then-place, pick-cool-then-place, pick-heat-then-place, step-limitation, task-completion
+- desklamp -> pick-and-place, search-strategy
+- dishsponge -> task-completion
+- egg -> object-recognition, pick-and-place, pick-two-obj-and-place, search-strategy, step-limitation, task-completion
+- fork -> step-limitation
+- glassbottle -> step-limitation
+- handtowel -> object-location, re-taking-objects, step-limitation, task-completion
+- kettle -> step-limitation, task-completion
+- keychain -> pick-and-place, search-strategy, step-limitation, task-completion
+- knife -> search-strategy
+- ladle -> step-limitation
+- lettuce -> object-location, object-recognition, pick-and-place, pick-clean-then-place, pick-heat-then-place, re-taking-objects, search-strategy, step-limitation
+- mug -> object-location, object-recognition, pick-and-place, pick-heat-then-place, re-taking-objects, search-strategy, step-limitation
+- newspaper -> search-strategy, step-limitation, task-completion
+- pan -> object-location, re-taking-objects, step-limitation
+- pen -> object-location
+- pencil -> object-recognition, step-limitation
+- peppershaker -> object-recognition
+- pillow -> examine-in-light, pick-and-place, step-limitation
+- plate -> pick-and-place, pick-cool-then-place, pick-heat-then-place, search-strategy
+- pot -> object-location, pick-and-place, re-taking-objects, task-completion
+- potato -> object-recognition, pick-and-place, pick-cool-then-place, pick-heat-then-place, step-limitation
+- remotecontrol -> object-recognition, pick-and-place, search-strategy, task-completion
+- saltshaker -> task-completion
+- soapbar -> object-location, object-recognition, re-taking-objects, search-strategy
+- soapbottle -> object-recognition, step-limitation, task-completion
+- spatula -> object-location, object-recognition, re-taking-objects, step-limitation
+- spoon -> object-recognition, re-taking-objects, search-strategy, step-limitation, task-completion
+- spraybottle -> pick-and-place, pick-two-obj-and-place, search-strategy, task-completion
+- statue -> object-recognition, pick-and-place, pick-two-obj-and-place, task-completion
+- tissuebox -> object-recognition, search-strategy, step-limitation
+- toiletpaper -> pick-and-place, step-limitation
+- tomato -> object-location, object-recognition, pick-and-place, re-taking-objects, search-strategy, step-limitation, task-completion
+- vase -> object-location, re-taking-objects, step-limitation
+- watch -> object-recognition, search-strategy
+- wateringcan -> object-location, re-taking-objects

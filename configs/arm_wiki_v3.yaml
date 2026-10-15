@@ -1,0 +1,68 @@
+# LLM-Wiki v3: compile rarely, read cheaply, one model.
+#
+# Described in Section 4 of the paper. Dnn tags cite the project's internal decision
+# register (D51-D58), which is not part of this repository.
+#
+#   slurm/submit.sh wiki_v3
+#
+# Design in one line each:
+#   * consolidation every 25 episodes, not curation every episode             (D51)
+#   * one page type, ~12-20 pages                                             (D52)
+#   * ONE model: qwen3:14b for memory and action                              (D53)
+#   * read path is 2 bounded LLM calls against a generated index              (D54)
+extends: _base.yaml
+
+# Declared deviations (SDD F9): the memory-side model writes whole Markdown pages, so it
+# may emit more tokens than the action model. The context window is not a deviation any
+# more: the server sets one window for every request (configs/_base.yaml, H1).
+# memory_llm.model is qwen3:14b, the same as the action model (D53).
+deviations:
+  - key: train.memory_llm.max_tokens
+    reason: "Consolidation emits whole Markdown pages; action selection emits a single
+             integer. Applies only to the memory path."
+  - key: eval.memory_llm.max_tokens
+    reason: "Same as train.memory_llm.max_tokens (read path only; writes are frozen at eval)."
+
+train:
+  # The memory-side model. ONE model (D53) — same weights as the action model below,
+  # different prompts and different context budgets.
+  memory_llm:
+    model: qwen3:14b
+    base_url: http://localhost:11434/v1
+    api_key: ollama
+    temperature: 0.0
+    max_tokens: 4096
+
+  memory:
+    type: wiki_v3
+
+    # K — the consolidation interval (D51). The free parameter of the whole design (O14).
+    # Larger K means more cross-episode synthesis and lower cost, but knowledge from
+    # episode 1 is unavailable until episode K. 25 gives 20 passes over a 500-episode
+    # chain. Sweep this, or defend it with the trade-off stated.
+    consolidate_every: 25
+
+    # D57 — what may enter the journal as a source. `episode` only is normal ALFWorld.
+    # Add `document` and point `documents:` at a corpus for the Part XV handbook study;
+    # nothing else in this config or in the code changes.
+    sources: [episode]
+    documents: null
+
+    # D06 as amended: commit per CONSOLIDATION, not per episode. Off by default because
+    # compute nodes do not always have git; turn on for the store-evolution figures.
+    git: false
+
+eval:
+  memory_llm:
+    model: qwen3:14b
+    base_url: http://localhost:11434/v1
+    api_key: ollama
+    temperature: 0.0
+    max_tokens: 4096
+
+  memory:
+    type: wiki_v3
+    consolidate_every: 25
+    sources: [episode]
+    documents: null
+    git: false

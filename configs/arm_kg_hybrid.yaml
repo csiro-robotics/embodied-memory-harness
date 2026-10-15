@@ -1,0 +1,50 @@
+# AriGraph + Optimus-1 KG arm (DEC-09) - unified protocol. Inherits the frozen _base.yaml;
+# only the memory: block differs. The graph starts EMPTY and is built online from the same
+# 500 training episodes as every other arm (LLM triplet extraction on every step, each
+# fact counted once per episode, tool facts kept only when the step's action shows them;
+# learned plans from successful episodes), then frozen for eval.
+#
+# Memory text per step:
+#   * plan, once per episode (Optimus-1's side, DEC-10): the knowledge-guided planner (one
+#     memory-side LLM call) turns the task, the first observation and the learned plan
+#     block (PLAN, TOOL, LIKELY LOCATIONS for the task object) into numbered sub-goals;
+#   * every step (AriGraph's side, K14): semantic search on the goal and the current
+#     observation (Algorithm 2, embedding search at every hop), then the episodic search
+#     over the retrieved facts (Eq. 1).
+#
+# Declared intrinsic properties (not frozen-key deviations):
+#   * Memory-side LLM inference: the triplet extractor on every training step, and the
+#     planner once per episode in both phases (counted in token_usage.memory).
+#   * Embedding inference (nomic-embed-text) runs in the memory path at train AND eval;
+#     it is counted in the arm's stats (embed_calls), not in calls_per_episode.
+#   * Hand-written structure: ALFWorld's receptacle list and command grammar, the closed
+#     relation and skill vocabularies, the keyword task parser and the plan-line
+#     templates. No location, tool or plan fact is hand-written.
+#
+#   slurm/submit.sh kg_hybrid
+extends: _base.yaml
+
+train:
+  memory:
+    type: kg_hybrid
+    learn_online: true        # build the graph from the 500 training episodes
+    episodic_search: true     # AriGraph episodic search every step (K2, K9)
+    planner: true             # DEC-10: Optimus-1 planner, 1 memory call per episode
+    depth: 2                  # semantic search depth d (AriGraph Alg. 2)
+    width: 5                  # semantic search width w: edges kept per query or vertex
+    k_steps: 3                # episodic steps returned (AriGraph's k)
+    top_k: 5                  # location list length in the plan block
+    embed_model: nomic-embed-text
+
+eval:
+  memory:
+    type: kg_hybrid
+    learn_online: true        # freeze() blocks all writes at eval; artifacts loaded
+    episodic_search: true     # K2: on in both phases, as AriGraph does; the hybrid branch
+                              # had switched it off after seeing valid_unseen results
+    planner: true             # same in both phases, so training behaves like eval
+    depth: 2
+    width: 5
+    k_steps: 3
+    top_k: 5
+    embed_model: nomic-embed-text

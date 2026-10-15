@@ -1,0 +1,207 @@
+---
+name: examine-in-light
+description: Procedure for examining an object using a desklamp, when the object is
+  in a reachable location.
+type: procedure
+applies_to:
+- examine_in_light
+objects:
+- object
+sources:
+- ep126
+- ep127
+- ep128
+- ep129
+- ep130
+- ep131
+- ep132
+- ep133
+- ep134
+- ep135
+- ep136
+- ep137
+- ep138
+- ep139
+- ep140
+- ep141
+- ep142
+- ep143
+- ep144
+- ep145
+- ep146
+- ep147
+- ep148
+- ep149
+- ep150
+- ep251
+- ep252
+- ep253
+- ep254
+- ep255
+- ep256
+- ep257
+- ep258
+- ep259
+- ep260
+- ep261
+- ep262
+- ep263
+- ep264
+- ep265
+- ep266
+- ep267
+- ep268
+- ep269
+- ep270
+- ep271
+- ep272
+- ep273
+- ep274
+- ep275
+- ep826
+- ep827
+- ep828
+- ep829
+- ep830
+- ep831
+- ep832
+- ep833
+- ep834
+- ep835
+- ep836
+- ep837
+- ep838
+- ep839
+- ep840
+- ep841
+- ep842
+- ep843
+- ep844
+- ep845
+- ep846
+- ep847
+- ep848
+- ep849
+- ep850
+- ep1351
+- ep1352
+- ep1353
+- ep1354
+- ep1355
+- ep1356
+- ep1357
+- ep1358
+- ep1359
+- ep1360
+- ep1361
+- ep1362
+- ep1363
+- ep1364
+- ep1365
+- ep1366
+- ep1367
+- ep1368
+- ep1369
+- ep1370
+- ep1371
+- ep1372
+- ep1373
+- ep1374
+- ep1375
+- ep1376
+- ep1377
+- ep1378
+- ep1379
+- ep1380
+- ep1381
+- ep1382
+- ep1383
+- ep1384
+- ep1385
+- ep1386
+- ep1387
+- ep1388
+- ep1389
+- ep1390
+- ep1391
+- ep1392
+- ep1393
+- ep1394
+- ep1395
+- ep1396
+- ep1397
+- ep1398
+- ep1399
+- ep1400
+- ep1451
+- ep1452
+- ep1453
+- ep1454
+- ep1455
+- ep1456
+- ep1457
+- ep1458
+- ep1459
+- ep1460
+- ep1461
+- ep1462
+- ep1463
+- ep1464
+- ep1465
+- ep1466
+- ep1467
+- ep1468
+- ep1469
+- ep1470
+- ep1471
+- ep1472
+- ep1473
+- ep1474
+- ep1475
+- ep1476
+- ep1477
+- ep1478
+- ep1479
+- ep1480
+- ep1481
+- ep1482
+- ep1483
+- ep1484
+- ep1485
+- ep1486
+- ep1487
+- ep1488
+- ep1489
+- ep1490
+- ep1491
+- ep1492
+- ep1493
+- ep1494
+- ep1495
+- ep1496
+- ep1497
+- ep1498
+- ep1499
+- ep1500
+confidence: hedged
+---
+
+# Preconditions
+- The desklamp is available and functional.
+- The object to be examined is located in a reachable place.
+
+# Steps
+1. use desklamp
+2. take object from location
+
+# Pitfalls
+- Failing to activate the desklamp before attempting to examine the object may result in failure.
+- Attempting to examine an object that is not in a reachable location may cause the robot to fail or take unnecessary steps.
+- The desklamp may not provide adequate illumination if the object is not positioned correctly.
+- Picking up the wrong object may lead to confusion and failure.
+
+# Not established
+- Whether the desklamp must be placed in a specific location to provide adequate light.
+- Whether the object must be moved to a specific location for examination.
+- Whether the robot should recheck the object's location if it is not found in the expected place.
+- Whether the object must be moved to a different location for proper illumination.

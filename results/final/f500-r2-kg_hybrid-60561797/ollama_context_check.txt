@@ -1,0 +1,15 @@
+requested_context_length: 32768
+truncated_prompts: 0
+--- context settings in ollama_server.log (count, setting) ---
+      1 --ctx-size 32768
+      1 n_ctx         = 32768
+      1 n_ctx_per_seq = 32768
+      1 --parallel 1
+--- context settings in ollama_memory_server.log (count, setting) ---
+      1 --ctx-size 2048
+      1 --ctx-size 32768
+      1 n_ctx         = 2048
+      1 n_ctx         = 32768
+      1 n_ctx_per_seq = 2048
+      1 n_ctx_per_seq = 32768
+      2 --parallel 1

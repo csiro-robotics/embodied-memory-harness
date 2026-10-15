@@ -1,0 +1,788 @@
+{
+  "train": {
+    "memory_type": "macla",
+    "memory_injection": {
+      "episodes_measured": 500,
+      "steps_total": 19421,
+      "retrieval_rate": 0.379,
+      "retrieval_steps_per_episode": 14.71,
+      "offered_tokens_per_episode": 1490.8,
+      "injected_tokens_per_episode": 1490.8,
+      "offered_tokens_per_step": 38.4,
+      "injected_tokens_per_step": 38.4,
+      "discarded_fraction": 0.0,
+      "truncated_step_rate": 0.0,
+      "peak_offered_tokens": 187
+    },
+    "memory_update_totals": {
+      "segment_llm": 500,
+      "segments_stored": 503,
+      "meta_procedure": {
+        "none": 465,
+        "created": 3,
+        "exists": 32
+      },
+      "credited": 1761,
+      "credited_success": 1195,
+      "memory_llm_calls": 904,
+      "theta_conf": -299.62300000000045,
+      "n_procedures_after": 81,
+      "n_meta_procedures_after": 3,
+      "failure_segment_kept": 209,
+      "dup_checks": 96,
+      "inserted": 81,
+      "merged": 422,
+      "refine_calls": 404,
+      "failure_segment_off_target": 5
+    },
+    "memory_timing_per_episode_s": {
+      "retrieve_s": 0.613,
+      "action_s": 14.117,
+      "update_s": 8.856
+    },
+    "action_model": "qwen3:14b",
+    "memory_model": "qwen3:14b",
+    "n": 500,
+    "n_success": 148,
+    "sr": 0.296,
+    "elapsed_s": 13510.8,
+    "avg_ep_s": 27.0,
+    "steps": {
+      "avg": 38.8,
+      "avg_ok": 12.3,
+      "avg_fail": 50.0
+    },
+    "token_usage": {
+      "action": {
+        "prompt_tokens": 23276147,
+        "completion_tokens": 136485,
+        "total_tokens": 23412632,
+        "n_calls": 19621
+      },
+      "memory": {
+        "prompt_tokens": 1867907,
+        "completion_tokens": 226917,
+        "total_tokens": 2094824,
+        "n_calls": 904
+      },
+      "total": {
+        "prompt_tokens": 25144054,
+        "completion_tokens": 363402,
+        "total_tokens": 25507456,
+        "n_calls": 20525
+      },
+      "action_pick_paths": {
+        "digit": 19199,
+        "text_substring": 4,
+        "edit_distance": 6,
+        "digit_leading": 10,
+        "range_retry_digit": 83,
+        "range_retry_clamped": 117,
+        "digit_in_text": 2
+      },
+      "transport_retries": {
+        "action": 0,
+        "memory": 0
+      },
+      "length_stops": {
+        "action": 1,
+        "memory": 34
+      },
+      "calls_per_episode": {
+        "action": 39.24,
+        "memory": 1.81
+      }
+    },
+    "per_family": {
+      "examine_in_light": {
+        "n": 43,
+        "success": 17,
+        "rate": 0.3953488372093023,
+        "avg_steps_ok": 9.352941176470589,
+        "avg_steps_fail": 50.0
+      },
+      "pick_and_place": {
+        "n": 111,
+        "success": 65,
+        "rate": 0.5855855855855856,
+        "avg_steps_ok": 8.707692307692307,
+        "avg_steps_fail": 50.0
+      },
+      "pick_clean_then_place": {
+        "n": 91,
+        "success": 11,
+        "rate": 0.12087912087912088,
+        "avg_steps_ok": 18.90909090909091,
+        "avg_steps_fail": 50.0
+      },
+      "pick_cool_then_place": {
+        "n": 75,
+        "success": 0,
+        "rate": 0.0,
+        "avg_steps_ok": 0.0,
+        "avg_steps_fail": 50.0
+      },
+      "pick_heat_then_place": {
+        "n": 65,
+        "success": 17,
+        "rate": 0.26153846153846155,
+        "avg_steps_ok": 18.647058823529413,
+        "avg_steps_fail": 50.0
+      },
+      "pick_two_obj_and_place": {
+        "n": 115,
+        "success": 38,
+        "rate": 0.33043478260869563,
+        "avg_steps_ok": 15.026315789473685,
+        "avg_steps_fail": 50.0
+      }
+    },
+    "sr_windows": [
+      {
+        "start": 1,
+        "end": 10,
+        "n": 10,
+        "success": 0,
+        "rate": 0.0
+      },
+      {
+        "start": 11,
+        "end": 20,
+        "n": 10,
+        "success": 1,
+        "rate": 0.1
+      },
+      {
+        "start": 21,
+        "end": 30,
+        "n": 10,
+        "success": 2,
+        "rate": 0.2
+      },
+      {
+        "start": 31,
+        "end": 40,
+        "n": 10,
+        "success": 1,
+        "rate": 0.1
+      },
+      {
+        "start": 41,
+        "end": 50,
+        "n": 10,
+        "success": 1,
+        "rate": 0.1
+      },
+      {
+        "start": 51,
+        "end": 60,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 61,
+        "end": 70,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 71,
+        "end": 80,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 81,
+        "end": 90,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 91,
+        "end": 100,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 101,
+        "end": 110,
+        "n": 10,
+        "success": 2,
+        "rate": 0.2
+      },
+      {
+        "start": 111,
+        "end": 120,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 121,
+        "end": 130,
+        "n": 10,
+        "success": 2,
+        "rate": 0.2
+      },
+      {
+        "start": 131,
+        "end": 140,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 141,
+        "end": 150,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 151,
+        "end": 160,
+        "n": 10,
+        "success": 2,
+        "rate": 0.2
+      },
+      {
+        "start": 161,
+        "end": 170,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 171,
+        "end": 180,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 181,
+        "end": 190,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 191,
+        "end": 200,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 201,
+        "end": 210,
+        "n": 10,
+        "success": 1,
+        "rate": 0.1
+      },
+      {
+        "start": 211,
+        "end": 220,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 221,
+        "end": 230,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 231,
+        "end": 240,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 241,
+        "end": 250,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 251,
+        "end": 260,
+        "n": 10,
+        "success": 1,
+        "rate": 0.1
+      },
+      {
+        "start": 261,
+        "end": 270,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 271,
+        "end": 280,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 281,
+        "end": 290,
+        "n": 10,
+        "success": 1,
+        "rate": 0.1
+      },
+      {
+        "start": 291,
+        "end": 300,
+        "n": 10,
+        "success": 2,
+        "rate": 0.2
+      },
+      {
+        "start": 301,
+        "end": 310,
+        "n": 10,
+        "success": 1,
+        "rate": 0.1
+      },
+      {
+        "start": 311,
+        "end": 320,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 321,
+        "end": 330,
+        "n": 10,
+        "success": 2,
+        "rate": 0.2
+      },
+      {
+        "start": 331,
+        "end": 340,
+        "n": 10,
+        "success": 2,
+        "rate": 0.2
+      },
+      {
+        "start": 341,
+        "end": 350,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 351,
+        "end": 360,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 361,
+        "end": 370,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 371,
+        "end": 380,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 381,
+        "end": 390,
+        "n": 10,
+        "success": 1,
+        "rate": 0.1
+      },
+      {
+        "start": 391,
+        "end": 400,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 401,
+        "end": 410,
+        "n": 10,
+        "success": 1,
+        "rate": 0.1
+      },
+      {
+        "start": 411,
+        "end": 420,
+        "n": 10,
+        "success": 2,
+        "rate": 0.2
+      },
+      {
+        "start": 421,
+        "end": 430,
+        "n": 10,
+        "success": 1,
+        "rate": 0.1
+      },
+      {
+        "start": 431,
+        "end": 440,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 441,
+        "end": 450,
+        "n": 10,
+        "success": 2,
+        "rate": 0.2
+      },
+      {
+        "start": 451,
+        "end": 460,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 461,
+        "end": 470,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 471,
+        "end": 480,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 481,
+        "end": 490,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 491,
+        "end": 500,
+        "n": 10,
+        "success": 2,
+        "rate": 0.2
+      }
+    ],
+    "memory_stats": {
+      "n_procedures": 81,
+      "n_meta_procedures": 3,
+      "n_episodes": 500,
+      "avg_posterior": 0.576,
+      "n_refined": 404,
+      "n_ontology_categories": 76,
+      "theta_conf": -0.619,
+      "zero_shot_episodes": 47,
+      "procedures_by_verb": {
+        "use": 11,
+        "take": 23,
+        "move": 33,
+        "heat": 7,
+        "clean": 3,
+        "slice": 2,
+        "cool": 2
+      },
+      "memory_llm_calls": 904,
+      "memory_prompt_tokens": 1867907,
+      "memory_completion_tokens": 226917,
+      "memory_llm_calls_per_episode": 1.808,
+      "memory_llm_errors": 0,
+      "events": {
+        "segment_llm": 500,
+        "failure_segment_kept": 209,
+        "dup_checks": 96,
+        "inserted": 81,
+        "merged": 422,
+        "refine_calls": 404,
+        "meta_subprocedure_failed": 99,
+        "failure_segment_off_target": 5
+      },
+      "embedder_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41"
+    },
+    "deviations": [],
+    "replicate": 1,
+    "seed": 42,
+    "errored_episodes": 0
+  },
+  "eval": {
+    "memory_type": "macla",
+    "memory_injection": {
+      "episodes_measured": 134,
+      "steps_total": 5767,
+      "retrieval_rate": 0.338,
+      "retrieval_steps_per_episode": 14.57,
+      "offered_tokens_per_episode": 1543.2,
+      "injected_tokens_per_episode": 1543.2,
+      "offered_tokens_per_step": 35.9,
+      "injected_tokens_per_step": 35.9,
+      "discarded_fraction": 0.0,
+      "truncated_step_rate": 0.0,
+      "peak_offered_tokens": 151
+    },
+    "memory_update_totals": null,
+    "memory_timing_per_episode_s": {
+      "retrieve_s": 0.799,
+      "action_s": 14.692,
+      "update_s": 0.0
+    },
+    "action_model": "qwen3:14b",
+    "memory_model": "qwen3:14b",
+    "n": 134,
+    "n_success": 28,
+    "sr": 0.208955223880597,
+    "elapsed_s": 2504.4,
+    "avg_ep_s": 18.7,
+    "steps": {
+      "avg": 43.0,
+      "avg_ok": 16.7,
+      "avg_fail": 50.0
+    },
+    "token_usage": {
+      "action": {
+        "prompt_tokens": 6398038,
+        "completion_tokens": 40550,
+        "total_tokens": 6438588,
+        "n_calls": 5857
+      },
+      "memory": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "n_calls": 0
+      },
+      "total": {
+        "prompt_tokens": 6398038,
+        "completion_tokens": 40550,
+        "total_tokens": 6438588,
+        "n_calls": 5857
+      },
+      "action_pick_paths": {
+        "digit": 5674,
+        "range_retry_clamped": 50,
+        "range_retry_digit": 40,
+        "digit_leading": 2,
+        "text_substring": 1
+      },
+      "transport_retries": {
+        "action": 0,
+        "memory": 0
+      },
+      "length_stops": {
+        "action": 0,
+        "memory": 0
+      },
+      "calls_per_episode": {
+        "action": 43.71,
+        "memory": 0.0
+      }
+    },
+    "per_family": {
+      "examine_in_light": {
+        "n": 18,
+        "success": 2,
+        "rate": 0.1111111111111111,
+        "avg_steps_ok": 7.5,
+        "avg_steps_fail": 50.0
+      },
+      "pick_and_place": {
+        "n": 24,
+        "success": 9,
+        "rate": 0.375,
+        "avg_steps_ok": 10.555555555555555,
+        "avg_steps_fail": 50.0
+      },
+      "pick_clean_then_place": {
+        "n": 31,
+        "success": 4,
+        "rate": 0.12903225806451613,
+        "avg_steps_ok": 31.25,
+        "avg_steps_fail": 50.0
+      },
+      "pick_cool_then_place": {
+        "n": 21,
+        "success": 1,
+        "rate": 0.047619047619047616,
+        "avg_steps_ok": 13.0,
+        "avg_steps_fail": 50.0
+      },
+      "pick_heat_then_place": {
+        "n": 23,
+        "success": 5,
+        "rate": 0.21739130434782608,
+        "avg_steps_ok": 26.4,
+        "avg_steps_fail": 50.0
+      },
+      "pick_two_obj_and_place": {
+        "n": 17,
+        "success": 7,
+        "rate": 0.4117647058823529,
+        "avg_steps_ok": 12.428571428571429,
+        "avg_steps_fail": 50.0
+      }
+    },
+    "sr_windows": [
+      {
+        "start": 1,
+        "end": 10,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 11,
+        "end": 20,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 21,
+        "end": 30,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 31,
+        "end": 40,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 41,
+        "end": 50,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 51,
+        "end": 60,
+        "n": 10,
+        "success": 0,
+        "rate": 0.0
+      },
+      {
+        "start": 61,
+        "end": 70,
+        "n": 10,
+        "success": 0,
+        "rate": 0.0
+      },
+      {
+        "start": 71,
+        "end": 80,
+        "n": 10,
+        "success": 2,
+        "rate": 0.2
+      },
+      {
+        "start": 81,
+        "end": 90,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 91,
+        "end": 100,
+        "n": 10,
+        "success": 2,
+        "rate": 0.2
+      },
+      {
+        "start": 101,
+        "end": 110,
+        "n": 10,
+        "success": 1,
+        "rate": 0.1
+      },
+      {
+        "start": 111,
+        "end": 120,
+        "n": 10,
+        "success": 2,
+        "rate": 0.2
+      },
+      {
+        "start": 121,
+        "end": 130,
+        "n": 10,
+        "success": 1,
+        "rate": 0.1
+      },
+      {
+        "start": 131,
+        "end": 134,
+        "n": 4,
+        "success": 1,
+        "rate": 0.25
+      }
+    ],
+    "memory_stats": {
+      "n_procedures": 81,
+      "n_meta_procedures": 3,
+      "n_episodes": 500,
+      "avg_posterior": 0.576,
+      "n_refined": 0,
+      "n_ontology_categories": 77,
+      "theta_conf": -0.619,
+      "zero_shot_episodes": 47,
+      "procedures_by_verb": {
+        "use": 11,
+        "take": 23,
+        "move": 33,
+        "heat": 7,
+        "clean": 3,
+        "slice": 2,
+        "cool": 2
+      },
+      "memory_llm_calls": 0,
+      "memory_prompt_tokens": 0,
+      "memory_completion_tokens": 0,
+      "memory_llm_calls_per_episode": 0.0,
+      "memory_llm_errors": 0,
+      "events": {
+        "meta_subprocedure_failed": 78
+      },
+      "embedder_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41"
+    },
+    "deviations": [],
+    "errored_episodes": 0,
+    "trained_store_sha256": {
+      "before_eval": "ab6af1000e8fa85c7fd205feafec348571354c34bb8992364fd0a000d2a56242",
+      "after_eval": "ab6af1000e8fa85c7fd205feafec348571354c34bb8992364fd0a000d2a56242",
+      "unchanged": true
+    },
+    "eval_split": "eval_out_of_distribution",
+    "replicate": 1,
+    "seed": 42,
+    "is_dev": false
+  }
+}

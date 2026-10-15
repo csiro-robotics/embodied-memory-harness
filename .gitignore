@@ -1,0 +1,28 @@
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# The MACLA authors' engine; download it (see README.md), do not commit it.
+src/MACLA.py
+
+# Personal cluster settings (copy slurm/site.env.example to create it).
+slurm/site.env
+
+# Run outputs. The raw per-episode log is large, so each phase also writes a gzip copy
+# (episodes.jsonl.gz) and only the compressed copy is committed. It keeps the full record
+# of every episode, including the memory text each arm served at every change.
+results/runs/*/*/episodes.jsonl
+# SLURM job logs sit next to the run folders.
+results/runs/*.out
+
+# Raw memory stores that are too large for git. The analysis-grade outputs
+# (report.json, summary.json, diagnostics.jsonl, wiki pages, graph.json) ARE committed.
+results/runs/*/train/wiki_v3/journal.jsonl
+results/runs/*/train/kg_hybrid/triplet_vectors.json
+results/runs/*/train/kg_hybrid/episodic.jsonl

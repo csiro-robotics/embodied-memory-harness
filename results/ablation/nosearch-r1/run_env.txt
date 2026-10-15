@@ -1,0 +1,3 @@
+replicate: 1
+train_tasks: /home/user/mh42_scratch2/project/train500_v2
+end: 2026-10-12T12:36:36+11:00

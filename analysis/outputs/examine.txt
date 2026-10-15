@@ -1,0 +1,3 @@
+r1 solved 13 of 18 | lamp turned on in 15 | lamp locations {'desk 1': 39} | visited desk 1 in 15 | episodes with a put-back 8 (total put-backs 15 ) | failures 5 of which with put-back 5
+r2 solved 14 of 18 | lamp turned on in 18 | lamp locations {'desk 1': 69} | visited desk 1 in 18 | episodes with a put-back 9 (total put-backs 38 ) | failures 4 of which with put-back 2
+r3 solved 4 of 18 | lamp turned on in 6 | lamp locations {'desk 1': 31} | visited desk 1 in 6 | episodes with a put-back 13 (total put-backs 91 ) | failures 14 of which with put-back 11

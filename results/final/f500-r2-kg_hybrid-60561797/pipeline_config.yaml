@@ -1,0 +1,57 @@
+alfworld_version: 0.4.2
+deviations: []
+eval:
+  action_llm:
+    api_key: ollama
+    base_url: http://localhost:11434/v1
+    max_tokens: 512
+    model: qwen3:14b
+    num_ctx: 32768
+    temperature: 0.0
+  agent:
+    history_window: 20
+  env:
+    domain_randomization: false
+    max_steps: 50
+    num_episodes: 134
+    train_eval: eval_out_of_distribution
+  memory:
+    depth: 2
+    embed_model: nomic-embed-text
+    episodic_search: true
+    k_steps: 3
+    learn_online: true
+    planner: true
+    top_k: 5
+    type: kg_hybrid
+    width: 5
+fewshot: none
+memory_block_max_tokens: 1024
+replicate: 2
+seed: 43
+train:
+  action_llm:
+    api_key: ollama
+    base_url: http://localhost:11434/v1
+    max_tokens: 512
+    model: qwen3:14b
+    num_ctx: 32768
+    temperature: 0.0
+  agent:
+    history_window: 20
+  env:
+    domain_randomization: false
+    max_steps: 50
+    num_episodes: 500
+    train_eval: train
+  memory:
+    depth: 2
+    embed_model: nomic-embed-text
+    episodic_search: true
+    k_steps: 3
+    learn_online: true
+    planner: true
+    top_k: 5
+    type: kg_hybrid
+    width: 5
+train500_path: null

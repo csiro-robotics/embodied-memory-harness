@@ -1,0 +1,70 @@
+alfworld_version: 0.4.2
+deviations:
+- key: train.memory_llm.max_tokens
+  reason: Consolidation emits whole Markdown pages; action selection emits a single
+    integer. Applies only to the memory path.
+- key: eval.memory_llm.max_tokens
+  reason: Same as train.memory_llm.max_tokens (read path only; writes are frozen at
+    eval).
+eval:
+  action_llm:
+    api_key: ollama
+    base_url: http://localhost:11434/v1
+    max_tokens: 512
+    model: qwen3:14b
+    num_ctx: 32768
+    temperature: 0.0
+  agent:
+    history_window: 20
+  env:
+    domain_randomization: false
+    max_steps: 50
+    num_episodes: 134
+    train_eval: eval_out_of_distribution
+  memory:
+    consolidate_every: 25
+    documents: null
+    git: false
+    search_order: false
+    sources:
+    - episode
+    type: wiki_v3
+  memory_llm:
+    api_key: ollama
+    base_url: http://localhost:11434/v1
+    max_tokens: 4096
+    model: qwen3:14b
+    temperature: 0.0
+fewshot: none
+memory_block_max_tokens: 1024
+replicate: 1
+seed: 42
+train:
+  action_llm:
+    api_key: ollama
+    base_url: http://localhost:11434/v1
+    max_tokens: 512
+    model: qwen3:14b
+    num_ctx: 32768
+    temperature: 0.0
+  agent:
+    history_window: 20
+  env:
+    domain_randomization: false
+    max_steps: 50
+    num_episodes: 500
+    train_eval: train
+  memory:
+    consolidate_every: 25
+    documents: null
+    git: false
+    sources:
+    - episode
+    type: wiki_v3
+  memory_llm:
+    api_key: ollama
+    base_url: http://localhost:11434/v1
+    max_tokens: 4096
+    model: qwen3:14b
+    temperature: 0.0
+train500_path: null

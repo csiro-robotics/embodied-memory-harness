@@ -1,0 +1,212 @@
+[
+  {
+    "episodes": 50,
+    "episodes_this_phase": 50,
+    "consolidations": 2,
+    "read_llm_calls": 64,
+    "read_errors": 0,
+    "consolidation_llm_calls": 14,
+    "memory_llm_calls_per_episode": 1.56,
+    "priors_objects": 52,
+    "priors_observations": 1303,
+    "evidence_forms": 95,
+    "n_pages": 13,
+    "by_type": {
+      "entity": 1,
+      "procedure": 11,
+      "caution": 1
+    },
+    "total_words": 1062,
+    "ep": 50,
+    "sr_so_far": 0.44
+  },
+  {
+    "episodes": 100,
+    "episodes_this_phase": 100,
+    "consolidations": 4,
+    "read_llm_calls": 164,
+    "read_errors": 0,
+    "consolidation_llm_calls": 28,
+    "memory_llm_calls_per_episode": 1.92,
+    "priors_objects": 55,
+    "priors_observations": 2390,
+    "evidence_forms": 209,
+    "n_pages": 13,
+    "by_type": {
+      "entity": 1,
+      "procedure": 11,
+      "caution": 1
+    },
+    "total_words": 1094,
+    "ep": 100,
+    "sr_so_far": 0.54
+  },
+  {
+    "episodes": 150,
+    "episodes_this_phase": 150,
+    "consolidations": 6,
+    "read_llm_calls": 264,
+    "read_errors": 0,
+    "consolidation_llm_calls": 42,
+    "memory_llm_calls_per_episode": 2.04,
+    "priors_objects": 57,
+    "priors_observations": 3679,
+    "evidence_forms": 294,
+    "n_pages": 13,
+    "by_type": {
+      "entity": 1,
+      "procedure": 11,
+      "caution": 1
+    },
+    "total_words": 1438,
+    "ep": 150,
+    "sr_so_far": 0.5466666666666666
+  },
+  {
+    "episodes": 200,
+    "episodes_this_phase": 200,
+    "consolidations": 8,
+    "read_llm_calls": 364,
+    "read_errors": 0,
+    "consolidation_llm_calls": 56,
+    "memory_llm_calls_per_episode": 2.1,
+    "priors_objects": 57,
+    "priors_observations": 5151,
+    "evidence_forms": 385,
+    "n_pages": 13,
+    "by_type": {
+      "entity": 1,
+      "procedure": 11,
+      "caution": 1
+    },
+    "total_words": 1504,
+    "ep": 200,
+    "sr_so_far": 0.555
+  },
+  {
+    "episodes": 250,
+    "episodes_this_phase": 250,
+    "consolidations": 10,
+    "read_llm_calls": 464,
+    "read_errors": 0,
+    "consolidation_llm_calls": 70,
+    "memory_llm_calls_per_episode": 2.136,
+    "priors_objects": 59,
+    "priors_observations": 6743,
+    "evidence_forms": 458,
+    "n_pages": 13,
+    "by_type": {
+      "entity": 1,
+      "procedure": 11,
+      "caution": 1
+    },
+    "total_words": 1760,
+    "ep": 250,
+    "sr_so_far": 0.54
+  },
+  {
+    "episodes": 300,
+    "episodes_this_phase": 300,
+    "consolidations": 12,
+    "read_llm_calls": 564,
+    "read_errors": 0,
+    "consolidation_llm_calls": 84,
+    "memory_llm_calls_per_episode": 2.16,
+    "priors_objects": 59,
+    "priors_observations": 8875,
+    "evidence_forms": 517,
+    "n_pages": 13,
+    "by_type": {
+      "entity": 1,
+      "procedure": 11,
+      "caution": 1
+    },
+    "total_words": 1826,
+    "ep": 300,
+    "sr_so_far": 0.52
+  },
+  {
+    "episodes": 350,
+    "episodes_this_phase": 350,
+    "consolidations": 14,
+    "read_llm_calls": 664,
+    "read_errors": 0,
+    "consolidation_llm_calls": 98,
+    "memory_llm_calls_per_episode": 2.177,
+    "priors_objects": 59,
+    "priors_observations": 10410,
+    "evidence_forms": 561,
+    "n_pages": 13,
+    "by_type": {
+      "entity": 1,
+      "procedure": 11,
+      "caution": 1
+    },
+    "total_words": 1850,
+    "ep": 350,
+    "sr_so_far": 0.5171428571428571
+  },
+  {
+    "episodes": 400,
+    "episodes_this_phase": 400,
+    "consolidations": 16,
+    "read_llm_calls": 764,
+    "read_errors": 0,
+    "consolidation_llm_calls": 112,
+    "memory_llm_calls_per_episode": 2.19,
+    "priors_objects": 59,
+    "priors_observations": 11954,
+    "evidence_forms": 628,
+    "n_pages": 13,
+    "by_type": {
+      "entity": 1,
+      "procedure": 11,
+      "caution": 1
+    },
+    "total_words": 1858,
+    "ep": 400,
+    "sr_so_far": 0.5225
+  },
+  {
+    "episodes": 450,
+    "episodes_this_phase": 450,
+    "consolidations": 18,
+    "read_llm_calls": 864,
+    "read_errors": 0,
+    "consolidation_llm_calls": 126,
+    "memory_llm_calls_per_episode": 2.2,
+    "priors_objects": 59,
+    "priors_observations": 13487,
+    "evidence_forms": 666,
+    "n_pages": 13,
+    "by_type": {
+      "entity": 1,
+      "procedure": 11,
+      "caution": 1
+    },
+    "total_words": 1876,
+    "ep": 450,
+    "sr_so_far": 0.5088888888888888
+  },
+  {
+    "episodes": 500,
+    "episodes_this_phase": 500,
+    "consolidations": 20,
+    "read_llm_calls": 964,
+    "read_errors": 0,
+    "consolidation_llm_calls": 140,
+    "memory_llm_calls_per_episode": 2.208,
+    "priors_objects": 59,
+    "priors_observations": 14948,
+    "evidence_forms": 713,
+    "n_pages": 13,
+    "by_type": {
+      "entity": 1,
+      "procedure": 11,
+      "caution": 1
+    },
+    "total_words": 1895,
+    "ep": 500,
+    "sr_so_far": 0.512
+  }
+]

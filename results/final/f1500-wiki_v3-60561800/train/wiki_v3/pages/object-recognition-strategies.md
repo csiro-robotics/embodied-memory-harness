@@ -1,0 +1,273 @@
+---
+name: object-recognition-strategies
+description: Strategies for distinguishing between visually similar objects during
+  search and handling tasks.
+type: procedure
+applies_to:
+- pick_clean_then_place
+- pick_heat_then_place
+- pick_cool_then_place
+- pick_two_obj_and_place
+objects:
+- mug
+- bread
+- apple
+- tomato
+- vase
+- soapbottle
+- lettuce
+- dishsponge
+- fork
+- spoon
+- candle
+- toiletpaper
+sources:
+- ep1
+- ep2
+- ep3
+- ep4
+- ep5
+- ep6
+- ep7
+- ep8
+- ep9
+- ep10
+- ep11
+- ep12
+- ep13
+- ep14
+- ep15
+- ep16
+- ep17
+- ep18
+- ep19
+- ep20
+- ep21
+- ep22
+- ep23
+- ep24
+- ep25
+- ep301
+- ep302
+- ep303
+- ep304
+- ep305
+- ep306
+- ep307
+- ep308
+- ep309
+- ep310
+- ep311
+- ep312
+- ep313
+- ep314
+- ep315
+- ep316
+- ep317
+- ep318
+- ep319
+- ep320
+- ep321
+- ep322
+- ep323
+- ep324
+- ep325
+- ep651
+- ep652
+- ep653
+- ep654
+- ep655
+- ep656
+- ep657
+- ep658
+- ep659
+- ep660
+- ep661
+- ep662
+- ep663
+- ep664
+- ep665
+- ep666
+- ep667
+- ep668
+- ep669
+- ep670
+- ep671
+- ep672
+- ep673
+- ep674
+- ep675
+- ep676
+- ep677
+- ep678
+- ep679
+- ep680
+- ep681
+- ep682
+- ep683
+- ep684
+- ep685
+- ep686
+- ep687
+- ep688
+- ep689
+- ep690
+- ep691
+- ep692
+- ep693
+- ep694
+- ep695
+- ep696
+- ep697
+- ep698
+- ep699
+- ep700
+- ep726
+- ep727
+- ep728
+- ep729
+- ep730
+- ep731
+- ep732
+- ep733
+- ep734
+- ep735
+- ep736
+- ep737
+- ep738
+- ep739
+- ep740
+- ep741
+- ep742
+- ep743
+- ep744
+- ep745
+- ep746
+- ep747
+- ep748
+- ep749
+- ep750
+- ep951
+- ep952
+- ep953
+- ep954
+- ep955
+- ep956
+- ep957
+- ep958
+- ep959
+- ep960
+- ep961
+- ep962
+- ep963
+- ep964
+- ep965
+- ep966
+- ep967
+- ep968
+- ep969
+- ep970
+- ep971
+- ep972
+- ep973
+- ep974
+- ep975
+- ep976
+- ep977
+- ep978
+- ep979
+- ep980
+- ep981
+- ep982
+- ep983
+- ep984
+- ep985
+- ep986
+- ep987
+- ep988
+- ep989
+- ep990
+- ep991
+- ep992
+- ep993
+- ep994
+- ep995
+- ep996
+- ep997
+- ep998
+- ep999
+- ep1000
+- ep1276
+- ep1277
+- ep1278
+- ep1279
+- ep1280
+- ep1281
+- ep1282
+- ep1283
+- ep1284
+- ep1285
+- ep1286
+- ep1287
+- ep1288
+- ep1289
+- ep1290
+- ep1291
+- ep1292
+- ep1293
+- ep1294
+- ep1295
+- ep1296
+- ep1297
+- ep1298
+- ep1299
+- ep1300
+- ep1301
+- ep1302
+- ep1303
+- ep1304
+- ep1305
+- ep1306
+- ep1307
+- ep1308
+- ep1309
+- ep1310
+- ep1311
+- ep1312
+- ep1313
+- ep1314
+- ep1315
+- ep1316
+- ep1317
+- ep1318
+- ep1319
+- ep1320
+- ep1321
+- ep1322
+- ep1323
+- ep1324
+- ep1325
+confidence: hedged
+---
+
+# Preconditions
+- The robot must be searching for a specific object type.
+- The robot must be aware of possible locations where the object might be found.
+
+# Steps
+1. Use detailed visual inspection, such as checking for unique features, to distinguish between visually similar objects.
+2. Consult visual aids, like lighting or magnification, to enhance object recognition.
+3. Avoid picking up objects that do not match the target unless the task explicitly allows it.
+4. If an incorrect object is picked up, drop it and continue searching.
+5. Check the target receptacle first before exploring other locations.
+6. If the target is not found, continue searching other locations in order of likelihood.
+
+# Pitfalls
+- Picking up objects that do not match the target can delay the task and lead to failure.
+- Failing to prioritize likely locations may result in unnecessary searching and time wasted.
+- Overreliance on visual cues without additional verification can lead to misidentification.
+
+# Not established
+- The exact order of likelihood for different object types and environments.
+- Whether the robot can distinguish between similar-looking objects without explicit training.
+- The effectiveness of visual and contextual cues in all lighting and environmental conditions.

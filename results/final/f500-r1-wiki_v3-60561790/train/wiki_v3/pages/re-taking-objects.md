@@ -1,0 +1,194 @@
+---
+name: re-taking-objects
+description: How to avoid re-taking objects from the destination receptacle during
+  placement tasks.
+type: procedure
+applies_to:
+- pick_two_obj_and_place
+- pick_and_place
+objects:
+- spoon
+- creditcard
+- cd
+- spatula
+- mug
+- vase
+- candle
+- lettuce
+- handtowel
+- tomato
+- apple
+- wateringcan
+- cellphone
+- soapbar
+- pan
+- pot
+sources:
+- ep1
+- ep2
+- ep3
+- ep4
+- ep5
+- ep6
+- ep7
+- ep8
+- ep9
+- ep10
+- ep11
+- ep12
+- ep13
+- ep14
+- ep15
+- ep16
+- ep17
+- ep18
+- ep19
+- ep20
+- ep21
+- ep22
+- ep23
+- ep24
+- ep25
+- ep51
+- ep52
+- ep53
+- ep54
+- ep55
+- ep56
+- ep57
+- ep58
+- ep59
+- ep60
+- ep61
+- ep62
+- ep63
+- ep64
+- ep65
+- ep66
+- ep67
+- ep68
+- ep69
+- ep70
+- ep71
+- ep72
+- ep73
+- ep74
+- ep75
+- ep126
+- ep127
+- ep128
+- ep129
+- ep130
+- ep131
+- ep132
+- ep133
+- ep134
+- ep135
+- ep136
+- ep137
+- ep138
+- ep139
+- ep140
+- ep141
+- ep142
+- ep143
+- ep144
+- ep145
+- ep146
+- ep147
+- ep148
+- ep149
+- ep150
+- ep326
+- ep327
+- ep328
+- ep329
+- ep330
+- ep331
+- ep332
+- ep333
+- ep334
+- ep335
+- ep336
+- ep337
+- ep338
+- ep339
+- ep340
+- ep341
+- ep342
+- ep343
+- ep344
+- ep345
+- ep346
+- ep347
+- ep348
+- ep349
+- ep350
+- ep351
+- ep352
+- ep353
+- ep354
+- ep355
+- ep356
+- ep357
+- ep358
+- ep359
+- ep360
+- ep361
+- ep362
+- ep363
+- ep364
+- ep365
+- ep366
+- ep367
+- ep368
+- ep369
+- ep370
+- ep371
+- ep372
+- ep373
+- ep374
+- ep375
+- ep426
+- ep427
+- ep428
+- ep429
+- ep430
+- ep431
+- ep432
+- ep433
+- ep434
+- ep435
+- ep436
+- ep437
+- ep438
+- ep439
+- ep440
+- ep441
+- ep442
+- ep443
+- ep444
+- ep445
+- ep446
+- ep447
+- ep448
+- ep449
+- ep450
+confidence: attested
+---
+
+# Preconditions
+- The robot has previously re-taken an object from the destination receptacle, leading to inefficiency or task failure.
+
+# Steps
+1. Identify the correct object from the initial search.
+2. Avoid picking up objects that are not the target.
+3. Move the correct object directly to the destination without re-taking it from the destination.
+
+# Pitfalls
+- Re-taking objects from the destination can lead to confusion and task failure.
+- The robot may not recognize the correct object if it is not clearly identified.
+
+# Not established
+- The exact conditions under which re-taking leads to failure.
+- The effectiveness of alternative strategies to avoid re-taking.

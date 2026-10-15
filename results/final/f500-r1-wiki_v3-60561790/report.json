@@ -1,0 +1,774 @@
+{
+  "train": {
+    "memory_type": "wiki_v3",
+    "memory_injection": {
+      "episodes_measured": 500,
+      "steps_total": 14293,
+      "retrieval_rate": 0.955,
+      "retrieval_steps_per_episode": 27.29,
+      "offered_tokens_per_episode": 1564.7,
+      "injected_tokens_per_episode": 1564.7,
+      "offered_tokens_per_step": 54.7,
+      "injected_tokens_per_step": 54.7,
+      "discarded_fraction": 0.0,
+      "truncated_step_rate": 0.0,
+      "peak_offered_tokens": 169
+    },
+    "memory_update_totals": {
+      "episode_index": 125250,
+      "observations_recorded": 15788,
+      "actions_attested": 1689,
+      "consolidated": 20,
+      "n_sources": 500,
+      "n_llm_calls": 140,
+      "n_findings": 120,
+      "n_rejected_outcome": 0,
+      "n_rejected_claims": 4,
+      "pass": 210,
+      "store": {
+        "n_pages": 260,
+        "total_words": 32789
+      }
+    },
+    "memory_timing_per_episode_s": {
+      "retrieve_s": 1.805,
+      "action_s": 9.536,
+      "update_s": 1.86
+    },
+    "action_model": "qwen3:14b",
+    "memory_model": "qwen3:14b",
+    "n": 500,
+    "n_success": 270,
+    "sr": 0.54,
+    "elapsed_s": 8051.4,
+    "avg_ep_s": 16.1,
+    "steps": {
+      "avg": 28.6,
+      "avg_ok": 10.3,
+      "avg_fail": 50.0
+    },
+    "token_usage": {
+      "action": {
+        "prompt_tokens": 16939461,
+        "completion_tokens": 98957,
+        "total_tokens": 17038418,
+        "n_calls": 14470
+      },
+      "memory": {
+        "prompt_tokens": 1264501,
+        "completion_tokens": 84887,
+        "total_tokens": 1349388,
+        "n_calls": 1102
+      },
+      "total": {
+        "prompt_tokens": 18203962,
+        "completion_tokens": 183844,
+        "total_tokens": 18387806,
+        "n_calls": 15572
+      },
+      "action_pick_paths": {
+        "digit": 14112,
+        "text_substring": 1,
+        "edit_distance": 1,
+        "range_retry_digit": 41,
+        "range_retry_clamped": 136,
+        "digit_in_text": 1,
+        "digit_leading": 1
+      },
+      "transport_retries": {
+        "action": 0,
+        "memory": 0
+      },
+      "length_stops": {
+        "action": 0,
+        "memory": 0
+      },
+      "calls_per_episode": {
+        "action": 28.94,
+        "memory": 2.2
+      }
+    },
+    "per_family": {
+      "examine_in_light": {
+        "n": 43,
+        "success": 16,
+        "rate": 0.37209302325581395,
+        "avg_steps_ok": 12.0,
+        "avg_steps_fail": 50.0
+      },
+      "pick_and_place": {
+        "n": 111,
+        "success": 83,
+        "rate": 0.7477477477477478,
+        "avg_steps_ok": 5.096385542168675,
+        "avg_steps_fail": 50.0
+      },
+      "pick_clean_then_place": {
+        "n": 91,
+        "success": 51,
+        "rate": 0.5604395604395604,
+        "avg_steps_ok": 8.745098039215685,
+        "avg_steps_fail": 50.0
+      },
+      "pick_cool_then_place": {
+        "n": 75,
+        "success": 31,
+        "rate": 0.41333333333333333,
+        "avg_steps_ok": 18.06451612903226,
+        "avg_steps_fail": 50.0
+      },
+      "pick_heat_then_place": {
+        "n": 65,
+        "success": 29,
+        "rate": 0.4461538461538462,
+        "avg_steps_ok": 12.482758620689655,
+        "avg_steps_fail": 50.0
+      },
+      "pick_two_obj_and_place": {
+        "n": 115,
+        "success": 60,
+        "rate": 0.5217391304347826,
+        "avg_steps_ok": 13.5,
+        "avg_steps_fail": 50.0
+      }
+    },
+    "sr_windows": [
+      {
+        "start": 1,
+        "end": 10,
+        "n": 10,
+        "success": 2,
+        "rate": 0.2
+      },
+      {
+        "start": 11,
+        "end": 20,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 21,
+        "end": 30,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 31,
+        "end": 40,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 41,
+        "end": 50,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 51,
+        "end": 60,
+        "n": 10,
+        "success": 8,
+        "rate": 0.8
+      },
+      {
+        "start": 61,
+        "end": 70,
+        "n": 10,
+        "success": 7,
+        "rate": 0.7
+      },
+      {
+        "start": 71,
+        "end": 80,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 81,
+        "end": 90,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 91,
+        "end": 100,
+        "n": 10,
+        "success": 7,
+        "rate": 0.7
+      },
+      {
+        "start": 101,
+        "end": 110,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 111,
+        "end": 120,
+        "n": 10,
+        "success": 9,
+        "rate": 0.9
+      },
+      {
+        "start": 121,
+        "end": 130,
+        "n": 10,
+        "success": 3,
+        "rate": 0.3
+      },
+      {
+        "start": 131,
+        "end": 140,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 141,
+        "end": 150,
+        "n": 10,
+        "success": 7,
+        "rate": 0.7
+      },
+      {
+        "start": 151,
+        "end": 160,
+        "n": 10,
+        "success": 2,
+        "rate": 0.2
+      },
+      {
+        "start": 161,
+        "end": 170,
+        "n": 10,
+        "success": 9,
+        "rate": 0.9
+      },
+      {
+        "start": 171,
+        "end": 180,
+        "n": 10,
+        "success": 7,
+        "rate": 0.7
+      },
+      {
+        "start": 181,
+        "end": 190,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 191,
+        "end": 200,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 201,
+        "end": 210,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 211,
+        "end": 220,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 221,
+        "end": 230,
+        "n": 10,
+        "success": 7,
+        "rate": 0.7
+      },
+      {
+        "start": 231,
+        "end": 240,
+        "n": 10,
+        "success": 2,
+        "rate": 0.2
+      },
+      {
+        "start": 241,
+        "end": 250,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 251,
+        "end": 260,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 261,
+        "end": 270,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 271,
+        "end": 280,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 281,
+        "end": 290,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 291,
+        "end": 300,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 301,
+        "end": 310,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 311,
+        "end": 320,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 321,
+        "end": 330,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 331,
+        "end": 340,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 341,
+        "end": 350,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 351,
+        "end": 360,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 361,
+        "end": 370,
+        "n": 10,
+        "success": 7,
+        "rate": 0.7
+      },
+      {
+        "start": 371,
+        "end": 380,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 381,
+        "end": 390,
+        "n": 10,
+        "success": 2,
+        "rate": 0.2
+      },
+      {
+        "start": 391,
+        "end": 400,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 401,
+        "end": 410,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 411,
+        "end": 420,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 421,
+        "end": 430,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 431,
+        "end": 440,
+        "n": 10,
+        "success": 9,
+        "rate": 0.9
+      },
+      {
+        "start": 441,
+        "end": 450,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 451,
+        "end": 460,
+        "n": 10,
+        "success": 7,
+        "rate": 0.7
+      },
+      {
+        "start": 461,
+        "end": 470,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 471,
+        "end": 480,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 481,
+        "end": 490,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 491,
+        "end": 500,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      }
+    ],
+    "memory_stats": {
+      "episodes": 500,
+      "episodes_this_phase": 500,
+      "consolidations": 20,
+      "read_llm_calls": 962,
+      "read_errors": 0,
+      "consolidation_llm_calls": 140,
+      "memory_llm_calls_per_episode": 2.204,
+      "priors_objects": 59,
+      "priors_observations": 15788,
+      "evidence_forms": 715,
+      "n_pages": 13,
+      "by_type": {
+        "entity": 1,
+        "procedure": 11,
+        "caution": 1
+      },
+      "total_words": 1970
+    },
+    "deviations": [
+      {
+        "key": "train.memory_llm.max_tokens",
+        "reason": "Consolidation emits whole Markdown pages; action selection emits a single integer. Applies only to the memory path."
+      },
+      {
+        "key": "eval.memory_llm.max_tokens",
+        "reason": "Same as train.memory_llm.max_tokens (read path only; writes are frozen at eval)."
+      }
+    ],
+    "replicate": 1,
+    "seed": 42,
+    "errored_episodes": 0
+  },
+  "eval": {
+    "memory_type": "wiki_v3",
+    "memory_injection": {
+      "episodes_measured": 134,
+      "steps_total": 4059,
+      "retrieval_rate": 1.0,
+      "retrieval_steps_per_episode": 30.29,
+      "offered_tokens_per_episode": 1630.9,
+      "injected_tokens_per_episode": 1630.9,
+      "offered_tokens_per_step": 53.8,
+      "injected_tokens_per_step": 53.8,
+      "discarded_fraction": 0.0,
+      "truncated_step_rate": 0.0,
+      "peak_offered_tokens": 86
+    },
+    "memory_update_totals": null,
+    "memory_timing_per_episode_s": {
+      "retrieve_s": 1.944,
+      "action_s": 9.783,
+      "update_s": 0.0
+    },
+    "action_model": "qwen3:14b",
+    "memory_model": "qwen3:14b",
+    "n": 134,
+    "n_success": 74,
+    "sr": 0.5522388059701493,
+    "elapsed_s": 1938.9,
+    "avg_ep_s": 14.5,
+    "steps": {
+      "avg": 30.3,
+      "avg_ok": 14.3,
+      "avg_fail": 50.0
+    },
+    "token_usage": {
+      "action": {
+        "prompt_tokens": 4660534,
+        "completion_tokens": 28139,
+        "total_tokens": 4688673,
+        "n_calls": 4111
+      },
+      "memory": {
+        "prompt_tokens": 220462,
+        "completion_tokens": 10489,
+        "total_tokens": 230951,
+        "n_calls": 268
+      },
+      "total": {
+        "prompt_tokens": 4880996,
+        "completion_tokens": 38628,
+        "total_tokens": 4919624,
+        "n_calls": 4379
+      },
+      "action_pick_paths": {
+        "digit": 4007,
+        "range_retry_clamped": 14,
+        "range_retry_digit": 38
+      },
+      "transport_retries": {
+        "action": 0,
+        "memory": 0
+      },
+      "length_stops": {
+        "action": 0,
+        "memory": 0
+      },
+      "calls_per_episode": {
+        "action": 30.68,
+        "memory": 2.0
+      }
+    },
+    "per_family": {
+      "examine_in_light": {
+        "n": 18,
+        "success": 13,
+        "rate": 0.7222222222222222,
+        "avg_steps_ok": 19.615384615384617,
+        "avg_steps_fail": 50.0
+      },
+      "pick_and_place": {
+        "n": 24,
+        "success": 14,
+        "rate": 0.5833333333333334,
+        "avg_steps_ok": 8.142857142857142,
+        "avg_steps_fail": 50.0
+      },
+      "pick_clean_then_place": {
+        "n": 31,
+        "success": 19,
+        "rate": 0.6129032258064516,
+        "avg_steps_ok": 9.052631578947368,
+        "avg_steps_fail": 50.0
+      },
+      "pick_cool_then_place": {
+        "n": 21,
+        "success": 8,
+        "rate": 0.38095238095238093,
+        "avg_steps_ok": 25.125,
+        "avg_steps_fail": 50.0
+      },
+      "pick_heat_then_place": {
+        "n": 23,
+        "success": 9,
+        "rate": 0.391304347826087,
+        "avg_steps_ok": 19.22222222222222,
+        "avg_steps_fail": 50.0
+      },
+      "pick_two_obj_and_place": {
+        "n": 17,
+        "success": 11,
+        "rate": 0.6470588235294118,
+        "avg_steps_ok": 13.090909090909092,
+        "avg_steps_fail": 50.0
+      }
+    },
+    "sr_windows": [
+      {
+        "start": 1,
+        "end": 10,
+        "n": 10,
+        "success": 7,
+        "rate": 0.7
+      },
+      {
+        "start": 11,
+        "end": 20,
+        "n": 10,
+        "success": 7,
+        "rate": 0.7
+      },
+      {
+        "start": 21,
+        "end": 30,
+        "n": 10,
+        "success": 7,
+        "rate": 0.7
+      },
+      {
+        "start": 31,
+        "end": 40,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 41,
+        "end": 50,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 51,
+        "end": 60,
+        "n": 10,
+        "success": 7,
+        "rate": 0.7
+      },
+      {
+        "start": 61,
+        "end": 70,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 71,
+        "end": 80,
+        "n": 10,
+        "success": 7,
+        "rate": 0.7
+      },
+      {
+        "start": 81,
+        "end": 90,
+        "n": 10,
+        "success": 6,
+        "rate": 0.6
+      },
+      {
+        "start": 91,
+        "end": 100,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 101,
+        "end": 110,
+        "n": 10,
+        "success": 5,
+        "rate": 0.5
+      },
+      {
+        "start": 111,
+        "end": 120,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 121,
+        "end": 130,
+        "n": 10,
+        "success": 4,
+        "rate": 0.4
+      },
+      {
+        "start": 131,
+        "end": 134,
+        "n": 4,
+        "success": 2,
+        "rate": 0.5
+      }
+    ],
+    "memory_stats": {
+      "episodes": 500,
+      "episodes_this_phase": 134,
+      "consolidations": 0,
+      "read_llm_calls": 268,
+      "read_errors": 0,
+      "consolidation_llm_calls": 0,
+      "memory_llm_calls_per_episode": 2.0,
+      "priors_objects": 59,
+      "priors_observations": 15788,
+      "evidence_forms": 715,
+      "n_pages": 13,
+      "by_type": {
+        "entity": 1,
+        "procedure": 11,
+        "caution": 1
+      },
+      "total_words": 1970
+    },
+    "deviations": [
+      {
+        "key": "train.memory_llm.max_tokens",
+        "reason": "Consolidation emits whole Markdown pages; action selection emits a single integer. Applies only to the memory path."
+      },
+      {
+        "key": "eval.memory_llm.max_tokens",
+        "reason": "Same as train.memory_llm.max_tokens (read path only; writes are frozen at eval)."
+      }
+    ],
+    "errored_episodes": 0,
+    "trained_store_sha256": {
+      "before_eval": "d633fad0a68be086c98949627842b83e24fd8cc4d02b24a5b49b1cc0f13706ab",
+      "after_eval": "d633fad0a68be086c98949627842b83e24fd8cc4d02b24a5b49b1cc0f13706ab",
+      "unchanged": true
+    },
+    "eval_split": "eval_out_of_distribution",
+    "replicate": 1,
+    "seed": 42,
+    "is_dev": false
+  }
+}

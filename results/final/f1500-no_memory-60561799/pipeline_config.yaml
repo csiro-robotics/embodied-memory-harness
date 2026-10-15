@@ -1,0 +1,58 @@
+alfworld_version: 0.4.2
+deviations: []
+eval:
+  action_llm:
+    api_key: ollama
+    base_url: http://localhost:11434/v1
+    max_tokens: 512
+    model: qwen3:14b
+    num_ctx: 32768
+    temperature: 0.0
+  agent:
+    history_window: 20
+  env:
+    domain_randomization: false
+    max_steps: 50
+    num_episodes: 134
+    train_eval: eval_out_of_distribution
+  memory:
+    type: no_memory
+eval_seen:
+  action_llm:
+    api_key: ollama
+    base_url: http://localhost:11434/v1
+    max_tokens: 512
+    model: qwen3:14b
+    num_ctx: 32768
+    temperature: 0.0
+  agent:
+    history_window: 20
+  env:
+    domain_randomization: false
+    max_steps: 50
+    num_episodes: 140
+    train_eval: eval_in_distribution
+  memory:
+    type: no_memory
+fewshot: none
+memory_block_max_tokens: 1024
+replicate: 1
+seed: 42
+train:
+  action_llm:
+    api_key: ollama
+    base_url: http://localhost:11434/v1
+    max_tokens: 512
+    model: qwen3:14b
+    num_ctx: 32768
+    temperature: 0.0
+  agent:
+    history_window: 20
+  env:
+    domain_randomization: false
+    max_steps: 50
+    num_episodes: 1500
+    train_eval: train
+  memory:
+    type: no_memory
+train500_path: null

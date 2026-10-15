@@ -1,0 +1,258 @@
+{
+  "memory_type": "wiki_v3",
+  "memory_injection": {
+    "episodes_measured": 134,
+    "steps_total": 4750,
+    "retrieval_rate": 1.0,
+    "retrieval_steps_per_episode": 35.45,
+    "offered_tokens_per_episode": 1541.5,
+    "injected_tokens_per_episode": 1541.5,
+    "offered_tokens_per_step": 43.5,
+    "injected_tokens_per_step": 43.5,
+    "discarded_fraction": 0.0,
+    "truncated_step_rate": 0.0,
+    "peak_offered_tokens": 73
+  },
+  "memory_update_totals": null,
+  "memory_timing_per_episode_s": {
+    "retrieve_s": 1.847,
+    "action_s": 11.496,
+    "update_s": 0.0
+  },
+  "action_model": "qwen3:14b",
+  "memory_model": "qwen3:14b",
+  "n": 134,
+  "n_success": 55,
+  "sr": 0.41044776119402987,
+  "elapsed_s": 2161.8,
+  "avg_ep_s": 16.1,
+  "steps": {
+    "avg": 35.4,
+    "avg_ok": 14.5,
+    "avg_fail": 50.0
+  },
+  "token_usage": {
+    "action": {
+      "prompt_tokens": 5412834,
+      "completion_tokens": 32634,
+      "total_tokens": 5445468,
+      "n_calls": 4789
+    },
+    "memory": {
+      "prompt_tokens": 218420,
+      "completion_tokens": 8917,
+      "total_tokens": 227337,
+      "n_calls": 268
+    },
+    "total": {
+      "prompt_tokens": 5631254,
+      "completion_tokens": 41551,
+      "total_tokens": 5672805,
+      "n_calls": 5057
+    },
+    "action_pick_paths": {
+      "digit": 4711,
+      "range_retry_clamped": 19,
+      "range_retry_digit": 20
+    },
+    "transport_retries": {
+      "action": 0,
+      "memory": 0
+    },
+    "length_stops": {
+      "action": 0,
+      "memory": 0
+    },
+    "calls_per_episode": {
+      "action": 35.74,
+      "memory": 2.0
+    }
+  },
+  "per_family": {
+    "examine_in_light": {
+      "n": 18,
+      "success": 4,
+      "rate": 0.2222222222222222,
+      "avg_steps_ok": 23.75,
+      "avg_steps_fail": 50.0
+    },
+    "pick_and_place": {
+      "n": 24,
+      "success": 12,
+      "rate": 0.5,
+      "avg_steps_ok": 4.916666666666667,
+      "avg_steps_fail": 50.0
+    },
+    "pick_clean_then_place": {
+      "n": 31,
+      "success": 17,
+      "rate": 0.5483870967741935,
+      "avg_steps_ok": 13.705882352941176,
+      "avg_steps_fail": 50.0
+    },
+    "pick_cool_then_place": {
+      "n": 21,
+      "success": 6,
+      "rate": 0.2857142857142857,
+      "avg_steps_ok": 26.333333333333332,
+      "avg_steps_fail": 50.0
+    },
+    "pick_heat_then_place": {
+      "n": 23,
+      "success": 4,
+      "rate": 0.17391304347826086,
+      "avg_steps_ok": 27.75,
+      "avg_steps_fail": 50.0
+    },
+    "pick_two_obj_and_place": {
+      "n": 17,
+      "success": 12,
+      "rate": 0.7058823529411765,
+      "avg_steps_ok": 12.0,
+      "avg_steps_fail": 50.0
+    }
+  },
+  "sr_windows": [
+    {
+      "start": 1,
+      "end": 10,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 11,
+      "end": 20,
+      "n": 10,
+      "success": 6,
+      "rate": 0.6
+    },
+    {
+      "start": 21,
+      "end": 30,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 31,
+      "end": 40,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 41,
+      "end": 50,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 51,
+      "end": 60,
+      "n": 10,
+      "success": 4,
+      "rate": 0.4
+    },
+    {
+      "start": 61,
+      "end": 70,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 71,
+      "end": 80,
+      "n": 10,
+      "success": 5,
+      "rate": 0.5
+    },
+    {
+      "start": 81,
+      "end": 90,
+      "n": 10,
+      "success": 2,
+      "rate": 0.2
+    },
+    {
+      "start": 91,
+      "end": 100,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 101,
+      "end": 110,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 111,
+      "end": 120,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 121,
+      "end": 130,
+      "n": 10,
+      "success": 3,
+      "rate": 0.3
+    },
+    {
+      "start": 131,
+      "end": 134,
+      "n": 4,
+      "success": 4,
+      "rate": 1.0
+    }
+  ],
+  "memory_stats": {
+    "episodes": 500,
+    "episodes_this_phase": 134,
+    "consolidations": 0,
+    "read_llm_calls": 268,
+    "read_errors": 0,
+    "consolidation_llm_calls": 0,
+    "memory_llm_calls_per_episode": 2.0,
+    "priors_objects": 59,
+    "priors_observations": 14948,
+    "evidence_forms": 713,
+    "n_pages": 13,
+    "by_type": {
+      "entity": 1,
+      "procedure": 11,
+      "caution": 1
+    },
+    "total_words": 1883
+  },
+  "deviations": [
+    {
+      "key": "train.memory_llm.max_tokens",
+      "reason": "Consolidation emits whole Markdown pages; action selection emits a single integer. Applies only to the memory path."
+    },
+    {
+      "key": "eval.memory_llm.max_tokens",
+      "reason": "Same as train.memory_llm.max_tokens (read path only; writes are frozen at eval)."
+    },
+    {
+      "key": "eval_seen",
+      "reason": "Additional evaluation of the frozen store on 140 valid_seen tasks, written to eval_seen/. The test evaluation is unchanged."
+    }
+  ],
+  "errored_episodes": 0,
+  "trained_store_sha256": {
+    "before_eval": "ef341013f7602230c88c52f1c92f8f75c9a55c21323d2f26c5600b1d16cb8bb6",
+    "after_eval": "ef341013f7602230c88c52f1c92f8f75c9a55c21323d2f26c5600b1d16cb8bb6",
+    "unchanged": true
+  },
+  "eval_split": "eval_out_of_distribution",
+  "replicate": 3,
+  "seed": 44,
+  "is_dev": false
+}

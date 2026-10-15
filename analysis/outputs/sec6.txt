@@ -1,0 +1,36 @@
+=== per-family pooled sign-flip p ===
+examine_in_light n=18 wiki=57 kg=43 pm=13 control=17 | wiki-kg p=0.188 | wiki-pm p=0.000 | kg-pm p=0.010 | wiki-control p=0.000 | kg-control p=0.008 | pm-control p=1.000
+pick_and_place n=24 wiki=57 kg=62 pm=35 control=15 | wiki-kg p=0.514 | wiki-pm p=0.023 | kg-pm p=0.013 | wiki-control p=0.001 | kg-control p=0.001 | pm-control p=0.020
+pick_clean_then_place n=31 wiki=60 kg=52 pm=8 control=10 | wiki-kg p=0.250 | wiki-pm p=0.000 | kg-pm p=0.000 | wiki-control p=0.000 | kg-control p=0.000 | pm-control p=0.845
+pick_cool_then_place n=21 wiki=30 kg=37 pm=2 control=5 | wiki-kg p=0.718 | wiki-pm p=0.006 | kg-pm p=0.002 | wiki-control p=0.035 | kg-control p=0.008 | pm-control p=1.000
+pick_heat_then_place n=23 wiki=32 kg=58 pm=30 control=20 | wiki-kg p=0.009 | wiki-pm p=1.000 | kg-pm p=0.007 | wiki-control p=0.423 | kg-control p=0.006 | pm-control p=0.352
+pick_two_obj_and_place n=17 wiki=67 kg=39 pm=53 control=0 | wiki-kg p=0.023 | wiki-pm p=0.364 | kg-pm p=0.393 | wiki-control p=0.000 | kg-control p=0.001 | pm-control p=0.000
+
+=== episodes in which the task's object never appeared in a reply ===
+wiki     never saw the object in 121 of 402 episodes (30.1%)
+         failures by family (never saw / failed): {'ne_in_ligh': '3/23', 'and_place': '31/31', 'clean_then': '26/37', 'cool_then_': '27/44', 'heat_then_': '33/47', 'two_obj_an': '1/17'}
+kg       never saw the object in 128 of 402 episodes (31.8%)
+         failures by family (never saw / failed): {'ne_in_ligh': '23/31', 'and_place': '26/27', 'clean_then': '30/45', 'cool_then_': '23/40', 'heat_then_': '18/29', 'two_obj_an': '8/31'}
+pm       never saw the object in 156 of 402 episodes (38.8%)
+         failures by family (never saw / failed): {'ne_in_ligh': '5/47', 'and_place': '44/47', 'clean_then': '47/86', 'cool_then_': '25/62', 'heat_then_': '24/48', 'two_obj_an': '11/24'}
+control  never saw the object in 268 of 402 episodes (66.7%)
+         failures by family (never saw / failed): {'ne_in_ligh': '39/45', 'and_place': '56/61', 'clean_then': '63/84', 'cool_then_': '33/60', 'heat_then_': '35/55', 'two_obj_an': '42/51'}
+
+=== PM: procedure in the memory block at step 0 ===
+('all', False) 39/232 = 16.8%
+('all', True) 49/170 = 28.8%
+('examine_in_light', True) 7/54 = 13.0%
+('pick_and_place', False) 12/43 = 27.9%
+('pick_and_place', True) 13/29 = 44.8%
+('pick_clean_then_place', False) 4/52 = 7.7%
+('pick_clean_then_place', True) 3/41 = 7.3%
+('pick_cool_then_place', False) 1/63 = 1.6%
+('pick_heat_then_place', False) 21/69 = 30.4%
+('pick_two_obj_and_place', False) 1/5 = 20.0%
+('pick_two_obj_and_place', True) 26/46 = 56.5%
+path at step 0 examine_in_light {'procedure': 54}
+path at step 0 pick_clean_then_place {'procedure': 41, 'precondition_failed': 52}
+path at step 0 pick_and_place {'procedure': 29, 'precondition_failed': 43}
+path at step 0 pick_cool_then_place {'precondition_failed': 63}
+path at step 0 pick_two_obj_and_place {'procedure': 46, 'precondition_failed': 5}
+path at step 0 pick_heat_then_place {'precondition_failed': 69}

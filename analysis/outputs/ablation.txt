@@ -1,0 +1,54 @@
+=== 1. search-order ablation (valid_unseen) ===
+r1  n=134  ablated 41.0%  original 55.2%  gained 21 lost 40  McNemar p=0.0204  briefings with search order 0
+r2  n=134  ablated 33.6%  original 55.2%  gained 16 lost 45  McNemar p=0.0003  briefings with search order 0
+r3  n=134  ablated 26.9%  original 41.0%  gained 13 lost 32  McNemar p=0.0066  briefings with search order 0
+pooled over 3 replicates: -16.7 pp [-24.9, -8.5], sign-flip p=0.0001, 134 tasks; ablated mean 33.8%
+  examine_in_light         ablated 4/18 3/18 3/18  original 13/18 14/18 4/18
+  pick_and_place           ablated 16/24 8/24 10/24  original 14/24 15/24 12/24
+  pick_clean_then_place    ablated 11/31 12/31 8/31  original 19/31 21/31 16/31
+  pick_cool_then_place     ablated 8/21 10/21 8/21  original 8/21 4/21 7/21
+  pick_heat_then_place     ablated 11/23 4/23 5/23  original 9/23 9/23 4/23
+  pick_two_obj_and_place   ablated 5/17 8/17 2/17  original 11/17 11/17 12/17
+
+--- location hint and finding the object (Section 7 analysis A), Wiki original vs ablated ---
+original: never saw the object in 30.1% of 402 episodes
+  first place right         189 eps (47.0%)  success  75.7%  never saw   5.8%  control same tasks  11.1%
+  no hint                    26 eps ( 6.5%)  success  57.7%  never saw  34.6%  control same tasks  23.1%
+  right place named later    93 eps (23.1%)  success  37.6%  never saw  32.3%  control same tasks   7.2%
+  right place not named      94 eps (23.4%)  success  10.6%  never saw  75.5%  control same tasks  13.1%
+ablated: never saw the object in 53.0% of 402 episodes
+  first place right          91 eps (22.6%)  success  65.9%  never saw  19.8%  control same tasks   8.8%
+  no hint                   198 eps (49.3%)  success  27.8%  never saw  62.6%  control same tasks  12.1%
+  right place named later    36 eps ( 9.0%)  success  38.9%  never saw  33.3%  control same tasks   5.6%
+  right place not named      77 eps (19.2%)  success   9.1%  never saw  76.6%  control same tasks  15.6%
+
+=== 2. replicate 3, examine page step deleted ===
+valid_unseen n=134  edited 41.0%  unedited 41.0%  gained 4 lost 4  McNemar p=1.0000
+  examine_in_light         edited 4/18  unedited 4/18  r1 13/18  r2 14/18
+  pick_and_place           edited 12/24  unedited 12/24  r1 14/24  r2 15/24
+  pick_clean_then_place    edited 17/31  unedited 16/31  r1 19/31  r2 21/31
+  pick_cool_then_place     edited 6/21  unedited 7/21  r1 8/21  r2 4/21
+  pick_heat_then_place     edited 4/23  unedited 4/23  r1 9/23  r2 9/23
+  pick_two_obj_and_place   edited 12/17  unedited 12/17  r1 11/17  r2 11/17
+  examine step deleted   briefings mentioning move 18/18, move actions 63, tasks with the lamp switched on 7
+  examine unedited r3    briefings mentioning move 13/18, move actions 117, tasks with the lamp switched on 6
+
+=== 2. replicate 3, examine page page corrected ===
+valid_unseen n=134  edited 50.7%  unedited 41.0%  gained 15 lost 2  McNemar p=0.0023
+  examine_in_light         edited 17/18  unedited 4/18  r1 13/18  r2 14/18
+  pick_and_place           edited 12/24  unedited 12/24  r1 14/24  r2 15/24
+  pick_clean_then_place    edited 17/31  unedited 16/31  r1 19/31  r2 21/31
+  pick_cool_then_place     edited 6/21  unedited 7/21  r1 8/21  r2 4/21
+  pick_heat_then_place     edited 4/23  unedited 4/23  r1 9/23  r2 9/23
+  pick_two_obj_and_place   edited 12/17  unedited 12/17  r1 11/17  r2 11/17
+  examine page corrected briefings mentioning move 0/18, move actions 3, tasks with the lamp switched on 17
+  examine unedited r3    briefings mentioning move 13/18, move actions 117, tasks with the lamp switched on 6
+valid_seen n=140  edited 50.0%  unedited 46.4%  gained 7 lost 2  McNemar p=0.1797
+  examine_in_light         edited 9/13  unedited 4/13
+  pick_and_place           edited 28/35  unedited 27/35
+  pick_clean_then_place    edited 17/27  unedited 17/27
+  pick_cool_then_place     edited 3/25  unedited 3/25
+  pick_heat_then_place     edited 3/16  unedited 3/16
+  pick_two_obj_and_place   edited 10/24  unedited 11/24
+  examine page corrected seen briefings mentioning move 0/13, move actions 24, tasks with the lamp switched on 10
+  examine unedited seen  briefings mentioning move 8/13, move actions 104, tasks with the lamp switched on 7

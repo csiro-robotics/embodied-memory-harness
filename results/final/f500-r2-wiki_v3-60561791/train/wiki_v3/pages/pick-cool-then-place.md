@@ -1,0 +1,191 @@
+---
+name: pick-cool-then-place
+description: A procedure for picking up an object, cooling it, and placing it in a
+  receptacle. Use when the task involves cooling an object and relocating it.
+type: procedure
+applies_to:
+- pick_cool_then_place
+objects:
+- egg
+- cup
+- bowl
+- tomato
+- pot
+- plate
+- mug
+- winebottle
+sources:
+- ep101
+- ep102
+- ep103
+- ep104
+- ep105
+- ep106
+- ep107
+- ep108
+- ep109
+- ep110
+- ep111
+- ep112
+- ep113
+- ep114
+- ep115
+- ep116
+- ep117
+- ep118
+- ep119
+- ep120
+- ep121
+- ep122
+- ep123
+- ep124
+- ep125
+- ep176
+- ep177
+- ep178
+- ep179
+- ep180
+- ep181
+- ep182
+- ep183
+- ep184
+- ep185
+- ep186
+- ep187
+- ep188
+- ep189
+- ep190
+- ep191
+- ep192
+- ep193
+- ep194
+- ep195
+- ep196
+- ep197
+- ep198
+- ep199
+- ep200
+- ep201
+- ep202
+- ep203
+- ep204
+- ep205
+- ep206
+- ep207
+- ep208
+- ep209
+- ep210
+- ep211
+- ep212
+- ep213
+- ep214
+- ep215
+- ep216
+- ep217
+- ep218
+- ep219
+- ep220
+- ep221
+- ep222
+- ep223
+- ep224
+- ep225
+- ep276
+- ep277
+- ep278
+- ep279
+- ep280
+- ep281
+- ep282
+- ep283
+- ep284
+- ep285
+- ep286
+- ep287
+- ep288
+- ep289
+- ep290
+- ep291
+- ep292
+- ep293
+- ep294
+- ep295
+- ep296
+- ep297
+- ep298
+- ep299
+- ep300
+- ep376
+- ep377
+- ep378
+- ep379
+- ep380
+- ep381
+- ep382
+- ep383
+- ep384
+- ep385
+- ep386
+- ep387
+- ep388
+- ep389
+- ep390
+- ep391
+- ep392
+- ep393
+- ep394
+- ep395
+- ep396
+- ep397
+- ep398
+- ep399
+- ep400
+- ep451
+- ep452
+- ep453
+- ep454
+- ep455
+- ep456
+- ep457
+- ep458
+- ep459
+- ep460
+- ep461
+- ep462
+- ep463
+- ep464
+- ep465
+- ep466
+- ep467
+- ep468
+- ep469
+- ep470
+- ep471
+- ep472
+- ep473
+- ep474
+- ep475
+confidence: hedged
+---
+
+# Preconditions
+- The target object must be present in the environment and identifiable.
+- The cooling tool must be available and functional.
+- The receptacle where the object is to be placed must be accessible.
+
+# Steps
+1. take <obj> from <place>
+2. cool <obj> with <tool>
+3. move <obj> to <receptacle>
+
+# Pitfalls
+- Confusion with visually similar objects may lead to incorrect pickups.
+- The robot may fail to locate the target object if it is not in the expected location.
+- Exhaustive searches for the object may be inefficient and lead to step limits being reached.
+- Cooling may be ineffective if the tool is not suitable for the object or the environment.
+
+# Not established
+- The exact location of the object may vary between environments.
+- The effectiveness of cooling may depend on the specific tool used.
+- The optimal order of checking locations for the object is not clearly established.
+- Whether the cooling action should be performed in a specific location, such as a fridge, is not universally confirmed.
